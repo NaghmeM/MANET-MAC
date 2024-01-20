@@ -1,0 +1,622 @@
+file 431445 1687630832                                          
+version 3
+run Netgate-0-20230624-11:19:30-17464
+attr configname Netgate
+attr datetime 20230624-11:19:30
+attr datetimef 20230624-111930
+attr experiment Netgate
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Vntnet
+attr processid 17464
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../omnetpp-6.0.1-windows-x86_64/omnetpp-6.0.1/samples/inet/images
+config network Vntnet
+config description manet
+config **.num_node 10
+config **.num_msg.result-recording-modes vector,histogram
+config check-signals true
+config **.vtn_node[*].mobility.typename TurtleMobility
+config **.vtn_node[0].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='1']\")"
+config **.vtn_node[1].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='2']\")"
+config **.vtn_node[2].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='3']\")"
+config **.vtn_node[3].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='4']\")"
+config **.vtn_node[4].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='5']\")"
+config **.vtn_node[5].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='6']\")"
+config **.vtn_node[6].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='7']\")"
+config **.vtn_node[7].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='8']\")"
+config **.vtn_node[8].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='9']\")"
+config **.vtn_node[9].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='10']\")"
+config **.vtn_node[10].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='11']\")"
+config **.vtn_node[11].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='12']\")"
+config **.vtn_node[12].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='13']\")"
+config **.vtn_node[13].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='14']\")"
+config **.vtn_node[14].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='15']\")"
+config **.vtn_node[15].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='16']\")"
+config **.vtn_node[16].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='17']\")"
+config **.vtn_node[17].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='18']\")"
+config **.vtn_node[18].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='19']\")"
+config **.vtn_node[19].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='20']\")"
+config **.vtn_node[20].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='21']\")"
+config **.vtn_node[21].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='22']\")"
+config **.vtn_node[22].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='23']\")"
+config **.vtn_node[23].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='24']\")"
+config **.vtn_node[24].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='25']\")"
+config **.vtn_node[25].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='26']\")"
+config **.vtn_node[26].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='27']\")"
+config **.vtn_node[27].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='28']\")"
+config **.vtn_node[28].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='29']\")"
+config **.vtn_node[29].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='30']\")"
+config **.vtn_node*.mobility.initFromDisplayString false
+config **.vtn_node*.mobility.speed 50mps
+config *.vtn_node[*].wlan[*].radio.transmitter.communicationRange 400m
+config *.vtn_node[*].hasStatus true
+config *.scenarioManager.script "xmldoc(\"moreDynamic.xml\")"
+config *.environment.ground.typename FlatGround
+config *.coordinateSystem.sceneLatitude 47.5377100deg
+config *.coordinateSystem.sceneLongitude 19.0334000deg
+config sim-time-limit 2minutes
+config num-rngs 3
+config **.mobility.rng-0 1
+config **.wlan[*].mac.rng-0 2
+config **.vtn_node[*].mobility.typename StationaryMobility
+config **.mobility.constraintAreaMinZ 0m
+config **.mobility.constraintAreaMaxZ 0m
+config **.mobility.constraintAreaMinX 0m
+config **.mobility.constraintAreaMinY 0m
+config **.mobility.constraintAreaMaxX 300m
+config **.mobility.constraintAreaMaxY 1000m
+config *.vtn_node*.numApps 1
+config *.vtn_node*.app[*].typename PingApp
+config *.vtn_node*.app[*].startTime uniform(1s,5s)
+config *.vtn_node*.app[*].printPing true
+config **.hasStatus true
+
+vector 0 Vntnet.vtn_node[0] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 1 Vntnet.vtn_node[0] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 2 Vntnet.vtn_node[0] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 3 Vntnet.vtn_node[1] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 4 Vntnet.vtn_node[1] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 5 Vntnet.vtn_node[1] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 6 Vntnet.vtn_node[2] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 7 Vntnet.vtn_node[2] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 8 Vntnet.vtn_node[2] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 9 Vntnet.vtn_node[3] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 10 Vntnet.vtn_node[3] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 11 Vntnet.vtn_node[3] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 12 Vntnet.vtn_node[4] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 13 Vntnet.vtn_node[4] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 14 Vntnet.vtn_node[4] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 15 Vntnet.vtn_node[5] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 16 Vntnet.vtn_node[5] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 17 Vntnet.vtn_node[5] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 18 Vntnet.vtn_node[6] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 19 Vntnet.vtn_node[6] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 20 Vntnet.vtn_node[6] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 21 Vntnet.vtn_node[7] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 22 Vntnet.vtn_node[7] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 23 Vntnet.vtn_node[7] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 24 Vntnet.vtn_node[8] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 25 Vntnet.vtn_node[8] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 26 Vntnet.vtn_node[8] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 27 Vntnet.vtn_node[9] coordX:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X"
+vector 28 Vntnet.vtn_node[9] coordY:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y"
+vector 29 Vntnet.vtn_node[9] coordZ:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z"
+vector 30 Vntnet.vtn_node[1].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 31 Vntnet.vtn_node[2].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 32 Vntnet.vtn_node[3].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 33 Vntnet.vtn_node[4].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 34 Vntnet.vtn_node[5].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 35 Vntnet.vtn_node[6].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 36 Vntnet.vtn_node[7].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 37 Vntnet.vtn_node[8].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 38 Vntnet.vtn_node[9].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 39 Vntnet.vtn_node[0].vtn[0] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 40 Vntnet.vtn_node[2].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 41 Vntnet.vtn_node[3].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 42 Vntnet.vtn_node[4].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 43 Vntnet.vtn_node[5].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 44 Vntnet.vtn_node[6].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 45 Vntnet.vtn_node[7].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 46 Vntnet.vtn_node[8].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 47 Vntnet.vtn_node[9].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 48 Vntnet.vtn_node[0].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 49 Vntnet.vtn_node[1].vtn[1] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 50 Vntnet.vtn_node[3].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 51 Vntnet.vtn_node[4].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 52 Vntnet.vtn_node[5].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 53 Vntnet.vtn_node[6].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 54 Vntnet.vtn_node[7].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 55 Vntnet.vtn_node[8].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 56 Vntnet.vtn_node[9].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 57 Vntnet.vtn_node[0].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 58 Vntnet.vtn_node[1].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 59 Vntnet.vtn_node[2].vtn[2] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 60 Vntnet.vtn_node[4].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 61 Vntnet.vtn_node[5].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 62 Vntnet.vtn_node[6].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 63 Vntnet.vtn_node[7].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 64 Vntnet.vtn_node[8].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 65 Vntnet.vtn_node[9].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 66 Vntnet.vtn_node[0].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 67 Vntnet.vtn_node[1].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 68 Vntnet.vtn_node[2].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 69 Vntnet.vtn_node[3].vtn[3] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 70 Vntnet.vtn_node[5].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 71 Vntnet.vtn_node[6].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 72 Vntnet.vtn_node[7].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 73 Vntnet.vtn_node[8].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 74 Vntnet.vtn_node[9].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 75 Vntnet.vtn_node[0].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 76 Vntnet.vtn_node[1].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 77 Vntnet.vtn_node[2].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 78 Vntnet.vtn_node[3].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 79 Vntnet.vtn_node[4].vtn[4] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 80 Vntnet.vtn_node[6].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 81 Vntnet.vtn_node[7].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 82 Vntnet.vtn_node[8].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 83 Vntnet.vtn_node[9].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 84 Vntnet.vtn_node[0].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 85 Vntnet.vtn_node[1].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 86 Vntnet.vtn_node[2].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 87 Vntnet.vtn_node[3].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 88 Vntnet.vtn_node[4].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 89 Vntnet.vtn_node[5].vtn[5] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 90 Vntnet.vtn_node[7].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 91 Vntnet.vtn_node[8].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 92 Vntnet.vtn_node[9].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 93 Vntnet.vtn_node[0].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 94 Vntnet.vtn_node[1].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 95 Vntnet.vtn_node[2].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 96 Vntnet.vtn_node[3].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 97 Vntnet.vtn_node[4].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 98 Vntnet.vtn_node[5].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 99 Vntnet.vtn_node[6].vtn[6] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 100 Vntnet.vtn_node[8].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 101 Vntnet.vtn_node[9].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 102 Vntnet.vtn_node[0].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 103 Vntnet.vtn_node[1].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 104 Vntnet.vtn_node[2].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 105 Vntnet.vtn_node[3].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 106 Vntnet.vtn_node[4].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 107 Vntnet.vtn_node[5].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 108 Vntnet.vtn_node[6].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 109 Vntnet.vtn_node[7].vtn[7] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 110 Vntnet.vtn_node[9].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 111 Vntnet.vtn_node[0].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 112 Vntnet.vtn_node[1].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 113 Vntnet.vtn_node[2].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 114 Vntnet.vtn_node[3].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 115 Vntnet.vtn_node[4].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 116 Vntnet.vtn_node[5].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 117 Vntnet.vtn_node[6].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 118 Vntnet.vtn_node[7].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+vector 119 Vntnet.vtn_node[8].vtn[8] num_msg:vector ETV
+attr recordingmode vector
+attr title " num msg"
+0	19982 3180 0 14197 0 14.2 173 100 150 24625 3540425
+1	23162 3528 0 14197 0 14.2 173 200 228.04081596714 35413.183663047 7260734.6560965
+2	26690 2834 0 14197 0 14.2 173 0 0 0 0
+3	29524 2339 0 14197 0 14.2 144 150 200 25425 4557925
+4	31863 2339 0 14197 0 14.2 144 200 250 33772 7957010
+5	34202 2051 0 14197 0 14.2 144 0 0 0 0
+6	36253 4051 0 14197 0 14.2 144 90.699770324863 106.0019871137 14154.875427182 1394280.1647014
+7	40304 4051 0 14197 0 14.2 144 609.54519082071 999.04051539488 116012.91850981 95336221.601623
+8	44355 2051 0 14197 0 14.2 144 0 0 0 0
+9	46406 10041 0 14197 0 14.2 296 200.92381210998 299.95229096716 79274.633328266 21474606.728731
+10	56447 10328 0 14197 0 14.2 296 328.83206230908 424.03772485404 115312.02092762 45210692.525852
+11	66775 6227 0 14197 0 14.2 296 0 0 0 0
+12	73002 10282 0 14197 0 14.2 295 61.335674696602 253.29187598418 47663.127415939 8612829.9598406
+13	83284 10286 0 14197 0 14.2 295 438.83950596267 467.51069631315 132825.50662184 59829307.683534
+14	93570 6184 0 14197 0 14.2 295 0 0 0 0
+15	99754 10184 0 14197 0 14.2 292 25.063904025592 299.50784672104 60093.901846782 13893978.674885
+16	109938 10181 0 14197 0 14.2 292 514.5191313694 733.14253147691 168034.25346846 97509077.247595
+17	120119 6126 0 14197 0 14.2 292 0 0 0 0
+18	126245 10024 0 14197 0 14.2 288 64.020187583673 299.87307749821 22223.76544406 2106564.5057843
+19	136269 10027 0 14197 0 14.2 288 103.22601208463 808.96165371956 59987.613639026 16270639.589699
+20	146296 6028 0 14197 0 14.2 288 0 0 0 0
+21	152324 10183 0 14197 0 14.2 292 41.784014808945 299.47559183221 70480.056503436 17600452.974
+22	162507 10188 0 14197 0 14.2 292 85.044207051396 916.30555177107 122469.45069062 62986142.130437
+23	172695 6132 0 14197 0 14.2 292 0 0 0 0
+24	178827 10125 0 14197 0 14.2 291 29.504050919786 209.20089119263 36449.704779588 5351491.442472
+25	188952 10129 0 14197 0 14.2 291 553.16596352168 594.86113373766 166196.01614598 94975276.065347
+26	199081 6092 0 14197 0 14.2 291 0 0 0 0
+27	205173 10369 0 14197 0 14.2 297 86.888893134892 282.09451660397 55007.390266954 11108261.187665
+28	215542 10366 0 14197 0 14.2 297 310.9090609564 358.7713151911 99170.60593696 33187703.001901
+29	225908 6243 0 14197 0 14.2 297 0 0 0 0
+30	232151 2152 1 14006 0.1 14 140 0 10 702 4902
+31	234303 2170 2 14199 0.1 14.2 141 0 10 694 4796
+32	236473 113 3 7658 0.1 7.7 8 1 10 46 352
+33	236586 137 4 14201 0.1 14.2 9 0 10 29 185
+34	236723 55 5 4677 0.1 4.7 4 1 8 16 94
+35	236778 130 6 13348 0.1 13.3 9 0 10 50 414
+36	236908 59 7 11444 0.1 11.4 4 0 10 19 165
+37	236967 86 8 10443 0.1 10.4 6 0 9 26 174
+38	237053 42 9 10052 0.1 10 3 2 7 12 62
+39	237095 2207 10 14198 0.1 14.2 143 0 10 706 4896
+40	239302 2175 11 14108 0.1 14.1 141 0 10 712 4996
+41	241477 1526 12 12296 0.1 12.3 102 0 10 533 3769
+42	243003 1267 13 9200 0.1 9.2 86 0 10 423 2983
+43	244270 237 14 7266 0.1 7.3 16 1 10 88 624
+44	244507 322 15 14153 0.1 14.1 22 0 10 81 483
+45	244829 389 16 11043 0.1 11 26 0 10 125 889
+46	245218 1083 17 14171 0.1 14.1 72 0 10 345 2307
+47	246301 1207 18 5420 0.1 5.4 82 0 10 431 3043
+48	247508 2188 19 14015 0.1 14 142 0 10 719 4987
+49	249696 2173 20 14117 0.1 14.1 141 0 10 714 4942
+50	251869 2696 21 14026 0.1 14 172 0 10 888 6156
+51	254565 2846 22 13918 0.1 13.9 186 0 10 972 6914
+52	257411 3016 23 14145 0.1 14.1 195 0 10 1043 7451
+53	260427 3823 24 12747 0.1 12.7 250 0 10 1325 9445
+54	264250 1889 25 12554 0.1 12.5 123 0 10 615 4191
+55	266139 2501 26 12967 0.1 12.9 167 0 10 862 6192
+56	268640 2223 27 14023 0.1 14 144 0 10 723 5019
+57	270863 4246 28 14200 0.1 14.2 275 0 10 1374 9564
+58	275109 2823 29 14126 0.1 14.1 180 0 10 903 6315
+59	277932 1652 30 14127 0.1 14.1 110 0 10 558 3932
+60	279584 2872 31 14128 0.1 14.1 184 0 10 992 7132
+61	282456 523 32 11010 0.1 11 35 0 10 179 1229
+62	282979 366 33 13954 0.1 13.9 24 0 10 129 917
+63	283345 768 34 12859 0.1 12.8 48 0 10 244 1690
+64	284113 988 35 12868 0.1 12.8 64 0 10 297 1971
+65	285101 777 36 12269 0.1 12.2 53 0 10 266 1894
+66	285878 4225 37 14033 0.1 14 274 0 10 1425 10061
+67	290103 3085 38 14135 0.1 14.1 196 0 10 1046 7424
+68	293188 1505 39 14136 0.1 14.1 96 0 10 508 3536
+69	294693 1483 40 14137 0.1 14.1 98 0 10 517 3619
+70	296176 1194 41 13343 0.1 13.3 76 0 10 408 2876
+71	297370 411 42 9120 0.1 9.1 28 0 10 160 1126
+72	297781 1323 43 12960 0.1 12.9 85 0 10 453 3251
+73	299104 1269 44 13973 0.1 13.9 82 0 10 428 3022
+74	300373 1459 45 13982 0.1 13.9 95 0 10 501 3515
+75	301832 4292 46 14143 0.1 14.1 278 0 10 1440 10248
+76	306124 4116 47 14144 0.1 14.1 266 0 10 1397 9955
+77	310240 1336 48 14044 0.1 14 87 0 10 455 3197
+78	311576 3834 49 14146 0.1 14.1 247 0 10 1335 9649
+79	315410 3166 50 14147 0.1 14.1 206 0 10 1131 8289
+80	318576 2612 51 10121 0.1 10.1 175 0 10 988 7406
+81	321188 1624 52 14166 0.1 14.1 104 0 10 539 3867
+82	322812 1737 53 14175 0.1 14.1 113 0 10 601 4289
+83	324549 2160 54 14184 0.1 14.1 142 0 10 741 5311
+84	326709 4221 55 14152 0.1 14.1 273 0 10 1413 10043
+85	330930 4036 56 14052 0.1 14 260 0 10 1413 10219
+86	334966 531 57 14154 0.1 14.1 32 0 10 173 1273
+87	335497 3997 58 14155 0.1 14.1 258 0 10 1402 10164
+88	339494 3953 59 14156 0.1 14.1 254 0 10 1388 10172
+89	343447 1755 60 14157 0.1 14.1 107 0 10 565 3975
+90	345202 2196 61 14167 0.1 14.1 139 0 10 720 5124
+91	347398 3565 62 14176 0.1 14.1 232 0 10 1254 9056
+92	350963 2612 63 13080 0.1 13 170 0 10 897 6437
+93	353575 4290 64 14161 0.1 14.1 278 0 10 1403 9889
+94	357865 3965 65 14162 0.1 14.1 256 0 10 1320 9338
+95	361830 2462 66 14163 0.1 14.1 159 0 10 846 6156
+96	364292 3590 67 14164 0.1 14.1 234 0 10 1254 9084
+97	367882 3033 68 14165 0.1 14.1 197 0 10 1048 7570
+98	370915 2735 69 14149 0.1 14.1 178 0 10 952 6886
+99	373650 2167 70 14158 0.1 14.1 143 0 10 788 5840
+100	375817 2524 71 14177 0.1 14.1 154 0 10 792 5572
+101	378341 2887 72 14186 0.1 14.1 177 0 10 921 6551
+102	381228 4532 73 14170 0.1 14.1 276 0 10 1358 9470
+103	385760 3475 74 14070 0.1 14 210 0 10 1075 7609
+104	389235 1963 75 14172 0.1 14.1 115 0 10 577 3903
+105	391198 3585 76 14173 0.1 14.1 218 0 10 1186 8576
+106	394783 3282 77 14174 0.1 14.1 200 0 10 1042 7402
+107	398065 2789 78 14150 0.1 14.1 169 0 10 889 6343
+108	400854 844 79 14159 0.1 14.1 50 0 10 229 1557
+109	401698 2110 80 14168 0.1 14.1 128 0 10 656 4636
+110	403808 2874 81 14187 0.1 14.1 176 0 10 924 6518
+111	406682 4580 82 14179 0.1 14.1 279 0 10 1394 9702
+112	411262 3341 83 14180 0.1 14.1 200 0 10 1008 6968
+113	414603 2263 84 14181 0.1 14.1 138 0 10 718 5042
+114	416866 3804 85 14182 0.1 14.1 229 0 10 1232 8692
+115	420670 3079 86 14183 0.1 14.1 187 0 10 990 7086
+116	423749 2337 87 14151 0.1 14.1 140 0 10 754 5378
+117	426086 1856 88 14185 0.1 14.1 112 0 10 570 4008
+118	427942 1743 89 14169 0.1 14.1 105 0 10 497 3361
+119	429685 1758 90 14178 0.1 14.1 106 0 10 533 3689
+

@@ -1,0 +1,4082 @@
+version 3
+run Netgate-0-20230624-11:19:30-17464
+attr configname Netgate
+attr datetime 20230624-11:19:30
+attr datetimef 20230624-111930
+attr experiment Netgate
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Vntnet
+attr processid 17464
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../omnetpp-6.0.1-windows-x86_64/omnetpp-6.0.1/samples/inet/images
+config network Vntnet
+config description manet
+config **.num_node 10
+config **.num_msg.result-recording-modes vector,histogram
+config check-signals true
+config **.vtn_node[*].mobility.typename TurtleMobility
+config **.vtn_node[0].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='1']\")"
+config **.vtn_node[1].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='2']\")"
+config **.vtn_node[2].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='3']\")"
+config **.vtn_node[3].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='4']\")"
+config **.vtn_node[4].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='5']\")"
+config **.vtn_node[5].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='6']\")"
+config **.vtn_node[6].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='7']\")"
+config **.vtn_node[7].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='8']\")"
+config **.vtn_node[8].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='9']\")"
+config **.vtn_node[9].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='10']\")"
+config **.vtn_node[10].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='11']\")"
+config **.vtn_node[11].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='12']\")"
+config **.vtn_node[12].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='13']\")"
+config **.vtn_node[13].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='14']\")"
+config **.vtn_node[14].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='15']\")"
+config **.vtn_node[15].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='16']\")"
+config **.vtn_node[16].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='17']\")"
+config **.vtn_node[17].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='18']\")"
+config **.vtn_node[18].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='19']\")"
+config **.vtn_node[19].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='20']\")"
+config **.vtn_node[20].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='21']\")"
+config **.vtn_node[21].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='22']\")"
+config **.vtn_node[22].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='23']\")"
+config **.vtn_node[23].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='24']\")"
+config **.vtn_node[24].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='25']\")"
+config **.vtn_node[25].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='26']\")"
+config **.vtn_node[26].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='27']\")"
+config **.vtn_node[27].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='28']\")"
+config **.vtn_node[28].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='29']\")"
+config **.vtn_node[29].mobility.turtleScript "xmldoc(\"turtle.xml\", \"movements//movement[@id='30']\")"
+config **.vtn_node*.mobility.initFromDisplayString false
+config **.vtn_node*.mobility.speed 50mps
+config *.vtn_node[*].wlan[*].radio.transmitter.communicationRange 400m
+config *.vtn_node[*].hasStatus true
+config *.scenarioManager.script "xmldoc(\"moreDynamic.xml\")"
+config *.environment.ground.typename FlatGround
+config *.coordinateSystem.sceneLatitude 47.5377100deg
+config *.coordinateSystem.sceneLongitude 19.0334000deg
+config sim-time-limit 2minutes
+config num-rngs 3
+config **.mobility.rng-0 1
+config **.wlan[*].mac.rng-0 2
+config **.vtn_node[*].mobility.typename StationaryMobility
+config **.mobility.constraintAreaMinZ 0m
+config **.mobility.constraintAreaMaxZ 0m
+config **.mobility.constraintAreaMinX 0m
+config **.mobility.constraintAreaMinY 0m
+config **.mobility.constraintAreaMaxX 300m
+config **.mobility.constraintAreaMaxY 1000m
+config *.vtn_node*.numApps 1
+config *.vtn_node*.app[*].typename PingApp
+config *.vtn_node*.app[*].startTime uniform(1s,5s)
+config *.vtn_node*.app[*].printPing true
+config **.hasStatus true
+
+par Vntnet.vtn_node[0].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[0].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[0].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[0].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[0].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[1].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[1].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[1].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[1].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[1].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[2].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[2].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[2].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[2].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[2].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[3].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[3].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[3].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[3].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[3].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[4].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[4].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[4].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[4].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[4].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[5].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[5].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[5].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[5].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[5].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[5].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[6].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[6].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[6].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[6].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[6].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[6].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[7].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[7].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[7].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[7].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[7].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[7].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[8].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[8].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[8].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[9].gate$o[8].channel typename "\"Vntnet.Channel\""
+par Vntnet.vtn_node[9].gate$o[8].channel disabled false
+attr mutable ""
+par Vntnet.vtn_node[9].gate$o[8].channel delay 0.1s
+attr mutable ""
+attr unit s
+par Vntnet.vtn_node[0].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[0].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[0].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[0].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[0].mobility updateDisplayString true
+par Vntnet.vtn_node[0].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[0].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[0].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[0].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[0].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[0].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[0].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[0].mobility faceForward true
+par Vntnet.vtn_node[0].mobility turtleScript "<movement id=\"1\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:3"
+par Vntnet.vtn_node[0].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[0] num_msg:histogram
+field count 143
+field mean 4.9370629370629
+field stddev 3.1516076452395
+field min 0
+field max 10
+field sum 706
+field sqrsum 4896
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	16
+bin	1	10
+bin	2	11
+bin	3	13
+bin	4	16
+bin	5	13
+bin	6	15
+bin	7	16
+bin	8	7
+bin	9	12
+bin	10	14
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[1] num_msg:histogram
+field count 142
+field mean 5.0633802816901
+field stddev 3.0901692412337
+field min 0
+field max 10
+field sum 719
+field sqrsum 4987
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	14
+bin	3	10
+bin	4	15
+bin	5	14
+bin	6	12
+bin	7	14
+bin	8	18
+bin	9	7
+bin	10	14
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[2] num_msg:histogram
+field count 275
+field mean 4.9963636363636
+field stddev 3.1385269940059
+field min 0
+field max 10
+field sum 1374
+field sqrsum 9564
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	24
+bin	1	26
+bin	2	23
+bin	3	26
+bin	4	25
+bin	5	29
+bin	6	21
+bin	7	28
+bin	8	23
+bin	9	27
+bin	10	23
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[3] num_msg:histogram
+field count 274
+field mean 5.2007299270073
+field stddev 3.1155758138855
+field min 0
+field max 10
+field sum 1425
+field sqrsum 10061
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	19
+bin	1	23
+bin	2	24
+bin	3	28
+bin	4	27
+bin	5	22
+bin	6	25
+bin	7	27
+bin	8	24
+bin	9	29
+bin	10	26
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[4] num_msg:histogram
+field count 278
+field mean 5.1798561151079
+field stddev 3.1731085751616
+field min 0
+field max 10
+field sum 1440
+field sqrsum 10248
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	22
+bin	1	24
+bin	2	20
+bin	3	33
+bin	4	24
+bin	5	24
+bin	6	25
+bin	7	25
+bin	8	22
+bin	9	30
+bin	10	29
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[5] num_msg:histogram
+field count 273
+field mean 5.1758241758242
+field stddev 3.1678302787325
+field min 0
+field max 10
+field sum 1413
+field sqrsum 10043
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	21
+bin	1	23
+bin	2	23
+bin	3	27
+bin	4	29
+bin	5	20
+bin	6	28
+bin	7	26
+bin	8	18
+bin	9	27
+bin	10	31
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[6] num_msg:histogram
+field count 278
+field mean 5.0467625899281
+field stddev 3.1841167675891
+field min 0
+field max 10
+field sum 1403
+field sqrsum 9889
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	27
+bin	1	25
+bin	2	18
+bin	3	28
+bin	4	27
+bin	5	24
+bin	6	28
+bin	7	29
+bin	8	19
+bin	9	23
+bin	10	30
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[7] num_msg:histogram
+field count 276
+field mean 4.9202898550725
+field stddev 3.1841918494118
+field min 0
+field max 10
+field sum 1358
+field sqrsum 9470
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	28
+bin	1	28
+bin	2	20
+bin	3	26
+bin	4	25
+bin	5	23
+bin	6	29
+bin	7	27
+bin	8	20
+bin	9	26
+bin	10	24
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[0].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[0].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[0].vtn[8] num_msg:histogram
+field count 279
+field mean 4.9964157706093
+field stddev 3.1377238323498
+field min 0
+field max 10
+field sum 1394
+field sqrsum 9702
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	24
+bin	1	27
+bin	2	22
+bin	3	28
+bin	4	28
+bin	5	20
+bin	6	31
+bin	7	26
+bin	8	23
+bin	9	25
+bin	10	25
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[0] typename "\"vt\""
+par Vntnet.vtn_node[0] ownIndex 0
+par Vntnet.vtn_node[1].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[1].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[1].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[1].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[1].mobility updateDisplayString true
+par Vntnet.vtn_node[1].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[1].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[1].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[1].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[1].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[1].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[1].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[1].mobility faceForward true
+par Vntnet.vtn_node[1].mobility turtleScript "<movement id=\"2\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:13"
+par Vntnet.vtn_node[1].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[0] num_msg:histogram
+field count 140
+field mean 5.0142857142857
+field stddev 3.153131854731
+field min 0
+field max 10
+field sum 702
+field sqrsum 4902
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	13
+bin	2	12
+bin	3	16
+bin	4	9
+bin	5	14
+bin	6	14
+bin	7	9
+bin	8	16
+bin	9	14
+bin	10	11
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[1] num_msg:histogram
+field count 141
+field mean 5.063829787234
+field stddev 3.0780623913603
+field min 0
+field max 10
+field sum 714
+field sqrsum 4942
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	9
+bin	1	14
+bin	2	15
+bin	3	10
+bin	4	15
+bin	5	14
+bin	6	12
+bin	7	13
+bin	8	18
+bin	9	7
+bin	10	14
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[2] num_msg:histogram
+field count 180
+field mean 5.0166666666667
+field stddev 3.1578137547197
+field min 0
+field max 10
+field sum 903
+field sqrsum 6315
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	17
+bin	2	18
+bin	3	16
+bin	4	17
+bin	5	21
+bin	6	12
+bin	7	14
+bin	8	18
+bin	9	15
+bin	10	18
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[3] num_msg:histogram
+field count 196
+field mean 5.3367346938776
+field stddev 3.073272297801
+field min 0
+field max 10
+field sum 1046
+field sqrsum 7424
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	9
+bin	1	16
+bin	2	21
+bin	3	18
+bin	4	20
+bin	5	17
+bin	6	17
+bin	7	16
+bin	8	28
+bin	9	9
+bin	10	25
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[4] num_msg:histogram
+field count 266
+field mean 5.2518796992481
+field stddev 3.1432011444592
+field min 0
+field max 10
+field sum 1397
+field sqrsum 9955
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	18
+bin	1	20
+bin	2	25
+bin	3	30
+bin	4	25
+bin	5	20
+bin	6	25
+bin	7	20
+bin	8	31
+bin	9	21
+bin	10	31
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[5] num_msg:histogram
+field count 260
+field mean 5.4346153846154
+field stddev 3.1315362294757
+field min 0
+field max 10
+field sum 1413
+field sqrsum 10219
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	24
+bin	2	23
+bin	3	22
+bin	4	28
+bin	5	20
+bin	6	28
+bin	7	20
+bin	8	28
+bin	9	17
+bin	10	38
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[6] num_msg:histogram
+field count 256
+field mean 5.15625
+field stddev 3.15094134705
+field min 0
+field max 10
+field sum 1320
+field sqrsum 9338
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	18
+bin	1	24
+bin	2	23
+bin	3	22
+bin	4	27
+bin	5	21
+bin	6	28
+bin	7	19
+bin	8	29
+bin	9	12
+bin	10	33
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[7] num_msg:histogram
+field count 210
+field mean 5.1190476190476
+field stddev 3.1743769380919
+field min 0
+field max 10
+field sum 1075
+field sqrsum 7609
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	17
+bin	1	21
+bin	2	18
+bin	3	15
+bin	4	21
+bin	5	18
+bin	6	22
+bin	7	17
+bin	8	24
+bin	9	14
+bin	10	23
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[1].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[1].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[1].vtn[8] num_msg:histogram
+field count 200
+field mean 5.04
+field stddev 3.0799073274579
+field min 0
+field max 10
+field sum 1008
+field sqrsum 6968
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	25
+bin	2	15
+bin	3	18
+bin	4	21
+bin	5	15
+bin	6	21
+bin	7	18
+bin	8	25
+bin	9	12
+bin	10	18
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[1] typename "\"vt\""
+par Vntnet.vtn_node[1] ownIndex 1
+par Vntnet.vtn_node[2].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[2].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[2].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[2].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[2].mobility updateDisplayString true
+par Vntnet.vtn_node[2].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[2].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[2].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[2].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[2].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[2].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[2].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[2].mobility faceForward true
+par Vntnet.vtn_node[2].mobility turtleScript "<movement id=\"3\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:27"
+par Vntnet.vtn_node[2].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[0] num_msg:histogram
+field count 141
+field mean 4.9219858156028
+field stddev 3.1397700597924
+field min 0
+field max 10
+field sum 694
+field sqrsum 4796
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	15
+bin	2	7
+bin	3	15
+bin	4	13
+bin	5	14
+bin	6	13
+bin	7	16
+bin	8	8
+bin	9	16
+bin	10	10
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[1] num_msg:histogram
+field count 141
+field mean 5.0496453900709
+field stddev 3.163014477937
+field min 0
+field max 10
+field sum 712
+field sqrsum 4996
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	16
+bin	2	14
+bin	3	8
+bin	4	16
+bin	5	12
+bin	6	13
+bin	7	13
+bin	8	16
+bin	9	7
+bin	10	16
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[2] num_msg:histogram
+field count 110
+field mean 5.0727272727273
+field stddev 3.1787975653751
+field min 0
+field max 10
+field sum 558
+field sqrsum 3932
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	6
+bin	1	11
+bin	2	17
+bin	3	7
+bin	4	10
+bin	5	9
+bin	6	8
+bin	7	8
+bin	8	14
+bin	9	9
+bin	10	11
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[3] num_msg:histogram
+field count 96
+field mean 5.2916666666667
+field stddev 2.987400442443
+field min 0
+field max 10
+field sum 508
+field sqrsum 3536
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	5
+bin	2	12
+bin	3	9
+bin	4	9
+bin	5	11
+bin	6	8
+bin	7	9
+bin	8	12
+bin	9	6
+bin	10	10
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[4] num_msg:histogram
+field count 87
+field mean 5.2298850574713
+field stddev 3.0829657626401
+field min 0
+field max 10
+field sum 455
+field sqrsum 3197
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	8
+bin	2	6
+bin	3	10
+bin	4	10
+bin	5	9
+bin	6	5
+bin	7	6
+bin	8	12
+bin	9	8
+bin	10	8
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[5] num_msg:histogram
+field count 32
+field mean 5.40625
+field stddev 3.3006292166504
+field min 0
+field max 10
+field sum 173
+field sqrsum 1273
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	2
+bin	1	2
+bin	2	3
+bin	3	4
+bin	4	3
+bin	5	4
+bin	6	2
+bin	7	2
+bin	8	0
+bin	9	5
+bin	10	5
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[6] num_msg:histogram
+field count 159
+field mean 5.3207547169811
+field stddev 3.2361110328094
+field min 0
+field max 10
+field sum 846
+field sqrsum 6156
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	11
+bin	2	13
+bin	3	13
+bin	4	18
+bin	5	12
+bin	6	15
+bin	7	12
+bin	8	17
+bin	9	12
+bin	10	22
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[7] num_msg:histogram
+field count 115
+field mean 5.0173913043478
+field stddev 2.9735164624658
+field min 0
+field max 10
+field sum 577
+field sqrsum 3903
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	6
+bin	1	11
+bin	2	13
+bin	3	9
+bin	4	14
+bin	5	10
+bin	6	11
+bin	7	13
+bin	8	11
+bin	9	8
+bin	10	9
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[2].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[2].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[2].vtn[8] num_msg:histogram
+field count 138
+field mean 5.2028985507246
+field stddev 3.0879077089236
+field min 0
+field max 10
+field sum 718
+field sqrsum 5042
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	7
+bin	1	14
+bin	2	12
+bin	3	13
+bin	4	18
+bin	5	7
+bin	6	17
+bin	7	8
+bin	8	16
+bin	9	12
+bin	10	14
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[2] typename "\"vt\""
+par Vntnet.vtn_node[2] ownIndex 2
+par Vntnet.vtn_node[3].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[3].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[3].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[3].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[3].mobility updateDisplayString true
+par Vntnet.vtn_node[3].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[3].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[3].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[3].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[3].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[3].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[3].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[3].mobility faceForward true
+par Vntnet.vtn_node[3].mobility turtleScript "<movement id=\"4\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:36"
+par Vntnet.vtn_node[3].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[0] num_msg:histogram
+field count 8
+field mean 5.75
+field stddev 3.5355339059327
+field min 1
+field max 10
+field sum 46
+field sqrsum 352
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	0
+bin	1	2
+bin	2	0
+bin	3	0
+bin	4	0
+bin	5	2
+bin	6	1
+bin	7	0
+bin	8	1
+bin	9	0
+bin	10	2
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[1] num_msg:histogram
+field count 102
+field mean 5.2254901960784
+field stddev 3.1210142510646
+field min 0
+field max 10
+field sum 533
+field sqrsum 3769
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	10
+bin	2	15
+bin	3	3
+bin	4	11
+bin	5	6
+bin	6	12
+bin	7	11
+bin	8	13
+bin	9	3
+bin	10	13
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[2] num_msg:histogram
+field count 172
+field mean 5.1627906976744
+field stddev 3.0314548458211
+field min 0
+field max 10
+field sum 888
+field sqrsum 6156
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	15
+bin	2	17
+bin	3	14
+bin	4	18
+bin	5	20
+bin	6	13
+bin	7	18
+bin	8	20
+bin	9	9
+bin	10	18
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[3] num_msg:histogram
+field count 98
+field mean 5.2755102040816
+field stddev 3.0317243987196
+field min 0
+field max 10
+field sum 517
+field sqrsum 3619
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	3
+bin	1	7
+bin	2	18
+bin	3	5
+bin	4	9
+bin	5	8
+bin	6	9
+bin	7	10
+bin	8	13
+bin	9	5
+bin	10	11
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[4] num_msg:histogram
+field count 247
+field mean 5.4048582995951
+field stddev 3.1452081051267
+field min 0
+field max 10
+field sum 1335
+field sqrsum 9649
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	13
+bin	1	16
+bin	2	28
+bin	3	24
+bin	4	27
+bin	5	21
+bin	6	19
+bin	7	18
+bin	8	25
+bin	9	22
+bin	10	34
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[5] num_msg:histogram
+field count 258
+field mean 5.4341085271318
+field stddev 3.1470941726244
+field min 0
+field max 10
+field sum 1402
+field sqrsum 10164
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	19
+bin	2	29
+bin	3	24
+bin	4	27
+bin	5	18
+bin	6	28
+bin	7	18
+bin	8	26
+bin	9	17
+bin	10	40
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[6] num_msg:histogram
+field count 234
+field mean 5.3589743589744
+field stddev 3.1851628628469
+field min 0
+field max 10
+field sum 1254
+field sqrsum 9084
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	13
+bin	1	18
+bin	2	27
+bin	3	22
+bin	4	22
+bin	5	17
+bin	6	21
+bin	7	19
+bin	8	25
+bin	9	16
+bin	10	34
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[7] num_msg:histogram
+field count 218
+field mean 5.4403669724771
+field stddev 3.128378189274
+field min 0
+field max 10
+field sum 1186
+field sqrsum 8576
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	9
+bin	1	17
+bin	2	28
+bin	3	17
+bin	4	20
+bin	5	16
+bin	6	23
+bin	7	16
+bin	8	27
+bin	9	14
+bin	10	31
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[3].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[3].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[3].vtn[8] num_msg:histogram
+field count 229
+field mean 5.3799126637555
+field stddev 3.00872094863
+field min 0
+field max 10
+field sum 1232
+field sqrsum 8692
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	6
+bin	1	21
+bin	2	25
+bin	3	20
+bin	4	28
+bin	5	14
+bin	6	27
+bin	7	17
+bin	8	28
+bin	9	16
+bin	10	27
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[3] typename "\"vt\""
+par Vntnet.vtn_node[3] ownIndex 3
+par Vntnet.vtn_node[4].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[4].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[4].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[4].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[4].mobility updateDisplayString true
+par Vntnet.vtn_node[4].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[4].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[4].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[4].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[4].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[4].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[4].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[4].mobility faceForward true
+par Vntnet.vtn_node[4].mobility turtleScript "<movement id=\"5\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:45"
+par Vntnet.vtn_node[4].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[0] num_msg:histogram
+field count 9
+field mean 3.2222222222222
+field stddev 3.3829638550307
+field min 0
+field max 10
+field sum 29
+field sqrsum 185
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	1
+bin	1	3
+bin	2	2
+bin	3	0
+bin	4	0
+bin	5	1
+bin	6	0
+bin	7	1
+bin	8	0
+bin	9	0
+bin	10	1
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[1] num_msg:histogram
+field count 86
+field mean 4.9186046511628
+field stddev 3.2583471677201
+field min 0
+field max 10
+field sum 423
+field sqrsum 2983
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	8
+bin	1	8
+bin	2	10
+bin	3	7
+bin	4	10
+bin	5	4
+bin	6	9
+bin	7	6
+bin	8	6
+bin	9	10
+bin	10	8
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[2] num_msg:histogram
+field count 186
+field mean 5.2258064516129
+field stddev 3.1490162591156
+field min 0
+field max 10
+field sum 972
+field sqrsum 6914
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	18
+bin	2	20
+bin	3	15
+bin	4	22
+bin	5	13
+bin	6	16
+bin	7	14
+bin	8	22
+bin	9	14
+bin	10	22
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[3] num_msg:histogram
+field count 184
+field mean 5.3913043478261
+field stddev 3.1221280459458
+field min 0
+field max 10
+field sum 992
+field sqrsum 7132
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	9
+bin	1	12
+bin	2	20
+bin	3	21
+bin	4	18
+bin	5	18
+bin	6	13
+bin	7	12
+bin	8	20
+bin	9	17
+bin	10	24
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[4] num_msg:histogram
+field count 206
+field mean 5.4902912621359
+field stddev 3.184934492204
+field min 0
+field max 10
+field sum 1131
+field sqrsum 8289
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	9
+bin	1	17
+bin	2	20
+bin	3	21
+bin	4	21
+bin	5	17
+bin	6	19
+bin	7	12
+bin	8	17
+bin	9	22
+bin	10	31
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[5] num_msg:histogram
+field count 254
+field mean 5.4645669291339
+field stddev 3.1978136691029
+field min 0
+field max 10
+field sum 1388
+field sqrsum 10172
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	18
+bin	2	25
+bin	3	27
+bin	4	26
+bin	5	16
+bin	6	27
+bin	7	16
+bin	8	25
+bin	9	19
+bin	10	41
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[6] num_msg:histogram
+field count 197
+field mean 5.3197969543147
+field stddev 3.1902696385612
+field min 0
+field max 10
+field sum 1048
+field sqrsum 7570
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	15
+bin	2	16
+bin	3	22
+bin	4	19
+bin	5	16
+bin	6	18
+bin	7	14
+bin	8	19
+bin	9	19
+bin	10	25
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[7] num_msg:histogram
+field count 200
+field mean 5.21
+field stddev 3.1488851022123
+field min 0
+field max 10
+field sum 1042
+field sqrsum 7402
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	14
+bin	2	19
+bin	3	26
+bin	4	19
+bin	5	13
+bin	6	18
+bin	7	15
+bin	8	22
+bin	9	18
+bin	10	22
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[4].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[4].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[4].vtn[8] num_msg:histogram
+field count 187
+field mean 5.2941176470588
+field stddev 3.1493501031334
+field min 0
+field max 10
+field sum 990
+field sqrsum 7086
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	13
+bin	2	17
+bin	3	22
+bin	4	22
+bin	5	13
+bin	6	15
+bin	7	13
+bin	8	18
+bin	9	21
+bin	10	21
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[4] typename "\"vt\""
+par Vntnet.vtn_node[4] ownIndex 4
+par Vntnet.vtn_node[5].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[5].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[5].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[5].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[5].mobility updateDisplayString true
+par Vntnet.vtn_node[5].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[5].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[5].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[5].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[5].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[5].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[5].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[5].mobility faceForward true
+par Vntnet.vtn_node[5].mobility turtleScript "<movement id=\"6\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:54"
+par Vntnet.vtn_node[5].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[0] num_msg:histogram
+field count 4
+field mean 4
+field stddev 3.1622776601684
+field min 1
+field max 8
+field sum 16
+field sqrsum 94
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	0
+bin	1	1
+bin	2	1
+bin	3	0
+bin	4	0
+bin	5	1
+bin	6	0
+bin	7	0
+bin	8	1
+bin	9	0
+bin	10	0
+par Vntnet.vtn_node[5].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[1] num_msg:histogram
+field count 16
+field mean 5.5
+field stddev 3.0550504633039
+field min 1
+field max 10
+field sum 88
+field sqrsum 624
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	0
+bin	1	2
+bin	2	1
+bin	3	1
+bin	4	3
+bin	5	1
+bin	6	3
+bin	7	0
+bin	8	2
+bin	9	0
+bin	10	3
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[2] num_msg:histogram
+field count 195
+field mean 5.3487179487179
+field stddev 3.1066002064504
+field min 0
+field max 10
+field sum 1043
+field sqrsum 7451
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	22
+bin	3	20
+bin	4	18
+bin	5	14
+bin	6	20
+bin	7	17
+bin	8	21
+bin	9	14
+bin	10	25
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[3] num_msg:histogram
+field count 35
+field mean 5.1142857142857
+field stddev 3.0367496998429
+field min 0
+field max 10
+field sum 179
+field sqrsum 1229
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	2
+bin	1	3
+bin	2	3
+bin	3	5
+bin	4	2
+bin	5	3
+bin	6	5
+bin	7	3
+bin	8	3
+bin	9	3
+bin	10	3
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[4] num_msg:histogram
+field count 76
+field mean 5.3684210526316
+field stddev 3.0236494737901
+field min 0
+field max 10
+field sum 408
+field sqrsum 2876
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	2
+bin	2	9
+bin	3	7
+bin	4	11
+bin	5	5
+bin	6	7
+bin	7	6
+bin	8	11
+bin	9	4
+bin	10	9
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[5] num_msg:histogram
+field count 107
+field mean 5.2803738317757
+field stddev 3.058530885848
+field min 0
+field max 10
+field sum 565
+field sqrsum 3975
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	7
+bin	1	5
+bin	2	8
+bin	3	14
+bin	4	14
+bin	5	13
+bin	6	8
+bin	7	9
+bin	8	7
+bin	9	6
+bin	10	16
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[6] num_msg:histogram
+field count 178
+field mean 5.3483146067416
+field stddev 3.1840035331848
+field min 0
+field max 10
+field sum 952
+field sqrsum 6886
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	11
+bin	1	14
+bin	2	16
+bin	3	19
+bin	4	18
+bin	5	12
+bin	6	20
+bin	7	12
+bin	8	17
+bin	9	13
+bin	10	26
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[7] num_msg:histogram
+field count 169
+field mean 5.2603550295858
+field stddev 3.149588388355
+field min 0
+field max 10
+field sum 889
+field sqrsum 6343
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	16
+bin	3	17
+bin	4	19
+bin	5	12
+bin	6	20
+bin	7	10
+bin	8	17
+bin	9	10
+bin	10	24
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[5].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[5].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[5].vtn[8] num_msg:histogram
+field count 140
+field mean 5.3857142857143
+field stddev 3.0783199058837
+field min 0
+field max 10
+field sum 754
+field sqrsum 5378
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	7
+bin	1	9
+bin	2	15
+bin	3	11
+bin	4	19
+bin	5	12
+bin	6	15
+bin	7	9
+bin	8	14
+bin	9	9
+bin	10	20
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[5] typename "\"vt\""
+par Vntnet.vtn_node[5] ownIndex 5
+par Vntnet.vtn_node[6].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[6].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[6].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[6].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[6].mobility updateDisplayString true
+par Vntnet.vtn_node[6].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[6].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[6].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[6].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[6].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[6].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[6].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[6].mobility faceForward true
+par Vntnet.vtn_node[6].mobility turtleScript "<movement id=\"7\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:62"
+par Vntnet.vtn_node[6].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[0] num_msg:histogram
+field count 9
+field mean 5.5555555555556
+field stddev 4.1264728010466
+field min 0
+field max 10
+field sum 50
+field sqrsum 414
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	0
+bin	3	0
+bin	4	0
+bin	5	2
+bin	6	0
+bin	7	0
+bin	8	0
+bin	9	2
+bin	10	2
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[1] num_msg:histogram
+field count 22
+field mean 3.6818181818182
+field stddev 2.9662604907023
+field min 0
+field max 10
+field sum 81
+field sqrsum 483
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	4
+bin	1	1
+bin	2	4
+bin	3	3
+bin	4	3
+bin	5	1
+bin	6	2
+bin	7	1
+bin	8	1
+bin	9	1
+bin	10	1
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[2] num_msg:histogram
+field count 250
+field mean 5.3
+field stddev 3.1191209759563
+field min 0
+field max 10
+field sum 1325
+field sqrsum 9445
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	16
+bin	1	17
+bin	2	29
+bin	3	19
+bin	4	27
+bin	5	19
+bin	6	27
+bin	7	19
+bin	8	28
+bin	9	19
+bin	10	30
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[3] num_msg:histogram
+field count 24
+field mean 5.375
+field stddev 3.1181446545913
+field min 0
+field max 10
+field sum 129
+field sqrsum 917
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	1
+bin	1	1
+bin	2	3
+bin	3	5
+bin	4	0
+bin	5	2
+bin	6	2
+bin	7	3
+bin	8	2
+bin	9	2
+bin	10	3
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[4] num_msg:histogram
+field count 28
+field mean 5.7142857142857
+field stddev 2.8002267481884
+field min 0
+field max 10
+field sum 160
+field sqrsum 1126
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	1
+bin	1	1
+bin	2	2
+bin	3	3
+bin	4	3
+bin	5	2
+bin	6	3
+bin	7	6
+bin	8	2
+bin	9	2
+bin	10	3
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[5] num_msg:histogram
+field count 175
+field mean 5.6457142857143
+field stddev 3.2412874248933
+field min 0
+field max 10
+field sum 988
+field sqrsum 7406
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	8
+bin	1	15
+bin	2	18
+bin	3	13
+bin	4	17
+bin	5	7
+bin	6	23
+bin	7	12
+bin	8	16
+bin	9	15
+bin	10	31
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[6] num_msg:histogram
+field count 143
+field mean 5.5104895104895
+field stddev 3.2476798497665
+field min 0
+field max 10
+field sum 788
+field sqrsum 5840
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	11
+bin	1	10
+bin	2	9
+bin	3	16
+bin	4	13
+bin	5	9
+bin	6	15
+bin	7	12
+bin	8	15
+bin	9	9
+bin	10	24
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[7] num_msg:histogram
+field count 50
+field mean 4.58
+field stddev 3.2204068699721
+field min 0
+field max 10
+field sum 229
+field sqrsum 1557
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	7
+bin	2	4
+bin	3	5
+bin	4	5
+bin	5	4
+bin	6	4
+bin	7	6
+bin	8	2
+bin	9	3
+bin	10	5
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[6].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[6].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[6].vtn[8] num_msg:histogram
+field count 112
+field mean 5.0892857142857
+field stddev 3.1581542432152
+field min 0
+field max 10
+field sum 570
+field sqrsum 4008
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	11
+bin	1	7
+bin	2	9
+bin	3	12
+bin	4	11
+bin	5	12
+bin	6	7
+bin	7	14
+bin	8	9
+bin	9	7
+bin	10	13
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[6] typename "\"vt\""
+par Vntnet.vtn_node[6] ownIndex 6
+par Vntnet.vtn_node[7].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[7].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[7].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[7].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[7].mobility updateDisplayString true
+par Vntnet.vtn_node[7].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[7].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[7].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[7].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[7].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[7].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[7].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[7].mobility faceForward true
+par Vntnet.vtn_node[7].mobility turtleScript "<movement id=\"8\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:70"
+par Vntnet.vtn_node[7].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[0] num_msg:histogram
+field count 4
+field mean 4.75
+field stddev 4.991659710624
+field min 0
+field max 10
+field sum 19
+field sqrsum 165
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	1
+bin	1	1
+bin	2	0
+bin	3	0
+bin	4	0
+bin	5	0
+bin	6	0
+bin	7	0
+bin	8	1
+bin	9	0
+bin	10	1
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[1] num_msg:histogram
+field count 26
+field mean 4.8076923076923
+field stddev 3.3943391789181
+field min 0
+field max 10
+field sum 125
+field sqrsum 889
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	2
+bin	2	0
+bin	3	2
+bin	4	2
+bin	5	4
+bin	6	1
+bin	7	3
+bin	8	3
+bin	9	2
+bin	10	2
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[2] num_msg:histogram
+field count 123
+field mean 5
+field stddev 3.0244902022666
+field min 0
+field max 10
+field sum 615
+field sqrsum 4191
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	7
+bin	1	12
+bin	2	17
+bin	3	6
+bin	4	12
+bin	5	14
+bin	6	12
+bin	7	11
+bin	8	14
+bin	9	8
+bin	10	10
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[3] num_msg:histogram
+field count 48
+field mean 5.0833333333333
+field stddev 3.0931175028642
+field min 0
+field max 10
+field sum 244
+field sqrsum 1690
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	4
+bin	1	5
+bin	2	3
+bin	3	3
+bin	4	5
+bin	5	5
+bin	6	6
+bin	7	5
+bin	8	4
+bin	9	4
+bin	10	4
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[4] num_msg:histogram
+field count 85
+field mean 5.3294117647059
+field stddev 3.1562041521201
+field min 0
+field max 10
+field sum 453
+field sqrsum 3251
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	9
+bin	2	6
+bin	3	7
+bin	4	9
+bin	5	6
+bin	6	9
+bin	7	8
+bin	8	10
+bin	9	5
+bin	10	11
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[5] num_msg:histogram
+field count 104
+field mean 5.1826923076923
+field stddev 3.2284067520735
+field min 0
+field max 10
+field sum 539
+field sqrsum 3867
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	9
+bin	1	10
+bin	2	8
+bin	3	6
+bin	4	12
+bin	5	10
+bin	6	12
+bin	7	5
+bin	8	11
+bin	9	8
+bin	10	13
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[6] num_msg:histogram
+field count 139
+field mean 5.1798561151079
+field stddev 3.1788517628024
+field min 0
+field max 10
+field sum 720
+field sqrsum 5124
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	11
+bin	3	11
+bin	4	15
+bin	5	11
+bin	6	17
+bin	7	12
+bin	8	11
+bin	9	8
+bin	10	19
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[7] num_msg:histogram
+field count 128
+field mean 5.125
+field stddev 3.1672537099184
+field min 0
+field max 10
+field sum 656
+field sqrsum 4636
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	11
+bin	1	11
+bin	2	10
+bin	3	12
+bin	4	13
+bin	5	8
+bin	6	18
+bin	7	9
+bin	8	13
+bin	9	8
+bin	10	15
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[7].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[7].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[7].vtn[8] num_msg:histogram
+field count 105
+field mean 4.7333333333333
+field stddev 3.1140706314141
+field min 0
+field max 10
+field sum 497
+field sqrsum 3361
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	11
+bin	2	6
+bin	3	9
+bin	4	13
+bin	5	9
+bin	6	11
+bin	7	10
+bin	8	10
+bin	9	6
+bin	10	8
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[7] typename "\"vt\""
+par Vntnet.vtn_node[7] ownIndex 7
+par Vntnet.vtn_node[8].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[8].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[8].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[8].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[8].mobility updateDisplayString true
+par Vntnet.vtn_node[8].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[8].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[8].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[8].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[8].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[8].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[8].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[8].mobility faceForward true
+par Vntnet.vtn_node[8].mobility turtleScript "<movement id=\"9\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:78"
+par Vntnet.vtn_node[8].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[0] num_msg:histogram
+field count 6
+field mean 4.3333333333333
+field stddev 3.5023801430837
+field min 0
+field max 9
+field sum 26
+field sqrsum 174
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	1
+bin	1	0
+bin	2	2
+bin	3	0
+bin	4	0
+bin	5	0
+bin	6	1
+bin	7	1
+bin	8	0
+bin	9	1
+bin	10	0
+bin	11	0
+bin	12	0
+par Vntnet.vtn_node[8].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[1] num_msg:histogram
+field count 72
+field mean 4.7916666666667
+field stddev 3.0347169624618
+field min 0
+field max 10
+field sum 345
+field sqrsum 2307
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	7
+bin	2	9
+bin	3	7
+bin	4	8
+bin	5	4
+bin	6	9
+bin	7	6
+bin	8	8
+bin	9	3
+bin	10	6
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[2] num_msg:histogram
+field count 167
+field mean 5.1616766467066
+field stddev 3.240030799477
+field min 0
+field max 10
+field sum 862
+field sqrsum 6192
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	13
+bin	1	15
+bin	2	19
+bin	3	13
+bin	4	14
+bin	5	12
+bin	6	19
+bin	7	9
+bin	8	21
+bin	9	11
+bin	10	21
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[3] num_msg:histogram
+field count 64
+field mean 4.640625
+field stddev 3.0673249164145
+field min 0
+field max 10
+field sum 297
+field sqrsum 1971
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	8
+bin	2	6
+bin	3	8
+bin	4	7
+bin	5	3
+bin	6	5
+bin	7	8
+bin	8	6
+bin	9	4
+bin	10	4
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[4] num_msg:histogram
+field count 82
+field mean 5.219512195122
+field stddev 3.1191340609171
+field min 0
+field max 10
+field sum 428
+field sqrsum 3022
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	9
+bin	2	6
+bin	3	6
+bin	4	10
+bin	5	5
+bin	6	10
+bin	7	8
+bin	8	8
+bin	9	6
+bin	10	9
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[5] num_msg:histogram
+field count 113
+field mean 5.3185840707965
+field stddev 3.1232580479984
+field min 0
+field max 10
+field sum 601
+field sqrsum 4289
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	7
+bin	1	9
+bin	2	10
+bin	3	11
+bin	4	13
+bin	5	5
+bin	6	14
+bin	7	10
+bin	8	11
+bin	9	10
+bin	10	13
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[6] num_msg:histogram
+field count 232
+field mean 5.4051724137931
+field stddev 3.1402386328818
+field min 0
+field max 10
+field sum 1254
+field sqrsum 9056
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	14
+bin	1	18
+bin	2	19
+bin	3	22
+bin	4	27
+bin	5	12
+bin	6	30
+bin	7	18
+bin	8	24
+bin	9	14
+bin	10	34
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[7] num_msg:histogram
+field count 154
+field mean 5.1428571428571
+field stddev 3.1299284199641
+field min 0
+field max 10
+field sum 792
+field sqrsum 5572
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	16
+bin	3	14
+bin	4	17
+bin	5	8
+bin	6	17
+bin	7	14
+bin	8	17
+bin	9	10
+bin	10	17
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[8].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[8].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[8].vtn[8] num_msg:histogram
+field count 106
+field mean 5.0283018867925
+field stddev 3.0997927647162
+field min 0
+field max 10
+field sum 533
+field sqrsum 3689
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	7
+bin	1	11
+bin	2	10
+bin	3	11
+bin	4	11
+bin	5	6
+bin	6	10
+bin	7	11
+bin	8	11
+bin	9	10
+bin	10	8
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[8] typename "\"vt\""
+par Vntnet.vtn_node[8] ownIndex 8
+par Vntnet.vtn_node[9].mobility typename "\"inet.mobility.single.TurtleMobility\""
+par Vntnet.vtn_node[9].mobility subjectModule "\"^\""
+par Vntnet.vtn_node[9].mobility coordinateSystemModule "\"\""
+par Vntnet.vtn_node[9].mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par Vntnet.vtn_node[9].mobility updateDisplayString true
+par Vntnet.vtn_node[9].mobility constraintAreaMinX 0m
+attr unit m
+par Vntnet.vtn_node[9].mobility constraintAreaMinY 0m
+attr unit m
+par Vntnet.vtn_node[9].mobility constraintAreaMinZ 0m
+attr unit m
+par Vntnet.vtn_node[9].mobility constraintAreaMaxX 300m
+attr unit m
+par Vntnet.vtn_node[9].mobility constraintAreaMaxY 1000m
+attr unit m
+par Vntnet.vtn_node[9].mobility constraintAreaMaxZ 0m
+attr unit m
+par Vntnet.vtn_node[9].mobility updateInterval 0.1s
+attr unit s
+par Vntnet.vtn_node[9].mobility faceForward true
+par Vntnet.vtn_node[9].mobility turtleScript "<movement id=\"10\">...</movement> at C:/Users/90531/Omnet/Manetbase/Manetbase/\\turtle.xml:86"
+par Vntnet.vtn_node[9].vtn[0] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[0] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[0] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[0] num_msg:histogram
+field count 3
+field mean 4
+field stddev 2.6457513110646
+field min 2
+field max 7
+field sum 12
+field sqrsum 62
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	0
+bin	1	0
+bin	2	1
+bin	3	1
+bin	4	0
+bin	5	0
+bin	6	0
+bin	7	1
+bin	8	0
+bin	9	0
+par Vntnet.vtn_node[9].vtn[1] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[1] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[1] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[1] num_msg:histogram
+field count 82
+field mean 5.2560975609756
+field stddev 3.0984304095316
+field min 0
+field max 10
+field sum 431
+field sqrsum 3043
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	4
+bin	2	12
+bin	3	5
+bin	4	11
+bin	5	6
+bin	6	10
+bin	7	4
+bin	8	10
+bin	9	4
+bin	10	11
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[2] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[2] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[2] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[2] num_msg:histogram
+field count 144
+field mean 5.0208333333333
+field stddev 3.1165445047921
+field min 0
+field max 10
+field sum 723
+field sqrsum 5019
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	16
+bin	3	11
+bin	4	14
+bin	5	16
+bin	6	10
+bin	7	14
+bin	8	16
+bin	9	8
+bin	10	15
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[3] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[3] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[3] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[3] num_msg:histogram
+field count 53
+field mean 5.0188679245283
+field stddev 3.2786639283857
+field min 0
+field max 10
+field sum 266
+field sqrsum 1894
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	4
+bin	2	5
+bin	3	9
+bin	4	3
+bin	5	2
+bin	6	3
+bin	7	6
+bin	8	6
+bin	9	5
+bin	10	5
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[4] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[4] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[4] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[4] num_msg:histogram
+field count 95
+field mean 5.2736842105263
+field stddev 3.0472942489431
+field min 0
+field max 10
+field sum 501
+field sqrsum 3515
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	5
+bin	1	9
+bin	2	8
+bin	3	8
+bin	4	11
+bin	5	5
+bin	6	14
+bin	7	7
+bin	8	12
+bin	9	6
+bin	10	10
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[5] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[5] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[5] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[5] num_msg:histogram
+field count 142
+field mean 5.2183098591549
+field stddev 3.2004348046425
+field min 0
+field max 10
+field sum 741
+field sqrsum 5311
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	11
+bin	1	11
+bin	2	14
+bin	3	14
+bin	4	14
+bin	5	8
+bin	6	15
+bin	7	11
+bin	8	16
+bin	9	11
+bin	10	17
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[6] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[6] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[6] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[6] num_msg:histogram
+field count 170
+field mean 5.2764705882353
+field stddev 3.1753543177901
+field min 0
+field max 10
+field sum 897
+field sqrsum 6437
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	12
+bin	1	13
+bin	2	18
+bin	3	12
+bin	4	20
+bin	5	10
+bin	6	23
+bin	7	8
+bin	8	21
+bin	9	10
+bin	10	23
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[7] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[7] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[7] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[7] num_msg:histogram
+field count 177
+field mean 5.2033898305085
+field stddev 3.1610897557266
+field min 0
+field max 10
+field sum 921
+field sqrsum 6551
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	15
+bin	1	10
+bin	2	21
+bin	3	15
+bin	4	16
+bin	5	13
+bin	6	21
+bin	7	12
+bin	8	21
+bin	9	13
+bin	10	20
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9].vtn[8] typename "\"vntnode\""
+par Vntnet.vtn_node[9].vtn[8] posX "intuniform(0, 1000)"
+par Vntnet.vtn_node[9].vtn[8] posY "intuniform(0, 1000)"
+statistic Vntnet.vtn_node[9].vtn[8] num_msg:histogram
+field count 176
+field mean 5.25
+field stddev 3.086375590513
+field min 0
+field max 10
+field sum 924
+field sqrsum 6518
+attr recordingmode histogram
+attr title " num msg"
+bin	-inf	0
+bin	0	13
+bin	1	9
+bin	2	19
+bin	3	16
+bin	4	20
+bin	5	13
+bin	6	24
+bin	7	10
+bin	8	20
+bin	9	10
+bin	10	22
+bin	11	0
+bin	12	0
+bin	13	0
+par Vntnet.vtn_node[9] typename "\"vt\""
+par Vntnet.vtn_node[9] ownIndex 9
+par Vntnet.visualizer.sceneVisualizer typename "\"inet.visualizer.canvas.scene.SceneCanvasVisualizer\""
+par Vntnet.visualizer.sceneVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.sceneVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.sceneVisualizer tags "\"\""
+par Vntnet.visualizer.sceneVisualizer physicalEnvironmentModule "\"physicalEnvironment\""
+par Vntnet.visualizer.sceneVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.sceneVisualizer axisLength "nan m"
+attr mutable ""
+attr unit m
+par Vntnet.visualizer.sceneVisualizer animationSpeed 0
+par Vntnet.visualizer.sceneVisualizer sceneMinX "nan m"
+attr unit m
+par Vntnet.visualizer.sceneVisualizer sceneMinY "nan m"
+attr unit m
+par Vntnet.visualizer.sceneVisualizer sceneMinZ "nan m"
+attr unit m
+par Vntnet.visualizer.sceneVisualizer sceneMaxX "nan m"
+attr unit m
+par Vntnet.visualizer.sceneVisualizer sceneMaxY "nan m"
+attr unit m
+par Vntnet.visualizer.sceneVisualizer sceneMaxZ "nan m"
+attr unit m
+par Vntnet.visualizer.sceneVisualizer zIndex 0
+par Vntnet.visualizer.sceneVisualizer viewAngle "\"x right y down z out\""
+attr mutable ""
+par Vntnet.visualizer.sceneVisualizer viewScale "\"1 1\""
+attr mutable ""
+par Vntnet.visualizer.sceneVisualizer viewTranslation "\"0 0\""
+attr mutable ""
+par Vntnet.visualizer.sceneVisualizer descriptionFigure "\"\""
+par Vntnet.visualizer.physicalEnvironmentVisualizer typename "\"inet.visualizer.canvas.environment.PhysicalEnvironmentCanvasVisualizer\""
+par Vntnet.visualizer.physicalEnvironmentVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.physicalEnvironmentVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.physicalEnvironmentVisualizer tags "\"\""
+par Vntnet.visualizer.physicalEnvironmentVisualizer physicalEnvironmentModule "\"physicalEnvironment\""
+par Vntnet.visualizer.physicalEnvironmentVisualizer displayObjects true
+par Vntnet.visualizer.physicalEnvironmentVisualizer zIndex 0
+par Vntnet.visualizer.networkNodeVisualizer typename "\"inet.visualizer.canvas.scene.NetworkNodeCanvasVisualizer\""
+par Vntnet.visualizer.networkNodeVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.networkNodeVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.networkNodeVisualizer tags "\"\""
+par Vntnet.visualizer.networkNodeVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.networkNodeVisualizer annotationSpacing 4
+par Vntnet.visualizer.networkNodeVisualizer placementPenalty 10
+par Vntnet.visualizer.networkNodeVisualizer zIndex 0
+par Vntnet.visualizer.networkConnectionVisualizer typename "\"inet.visualizer.canvas.scene.NetworkConnectionCanvasVisualizer\""
+par Vntnet.visualizer.networkConnectionVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.networkConnectionVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.networkConnectionVisualizer tags "\"\""
+par Vntnet.visualizer.networkConnectionVisualizer displayNetworkConnections true
+par Vntnet.visualizer.networkConnectionVisualizer nodeFilter "\"\""
+attr mutable ""
+par Vntnet.visualizer.networkConnectionVisualizer lineColor "\"black\""
+par Vntnet.visualizer.networkConnectionVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.networkConnectionVisualizer lineWidth 1
+par Vntnet.visualizer.networkConnectionVisualizer zIndex 0
+par Vntnet.visualizer.mobilityVisualizer typename "\"inet.visualizer.canvas.mobility.MobilityCanvasVisualizer\""
+par Vntnet.visualizer.mobilityVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.mobilityVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.mobilityVisualizer tags "\"\""
+par Vntnet.visualizer.mobilityVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.mobilityVisualizer displayMobility true
+par Vntnet.visualizer.mobilityVisualizer animationSpeed 0
+par Vntnet.visualizer.mobilityVisualizer moduleFilter "\"**.mobility\""
+attr mutable ""
+par Vntnet.visualizer.mobilityVisualizer displayPositions false
+par Vntnet.visualizer.mobilityVisualizer positionCircleRadius 4
+par Vntnet.visualizer.mobilityVisualizer positionCircleLineWidth 1
+par Vntnet.visualizer.mobilityVisualizer positionCircleLineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.mobilityVisualizer positionCircleFillColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.mobilityVisualizer displayOrientations false
+par Vntnet.visualizer.mobilityVisualizer orientationPieRadius 32
+par Vntnet.visualizer.mobilityVisualizer orientationPieSize 0.2
+par Vntnet.visualizer.mobilityVisualizer orientationPieOpacity 0.25
+par Vntnet.visualizer.mobilityVisualizer orientationLineColor "\"black\""
+par Vntnet.visualizer.mobilityVisualizer orientationLineStyle "\"solid\""
+par Vntnet.visualizer.mobilityVisualizer orientationLineWidth 1
+par Vntnet.visualizer.mobilityVisualizer orientationFillColor "\"blue\""
+par Vntnet.visualizer.mobilityVisualizer displayVelocities false
+par Vntnet.visualizer.mobilityVisualizer velocityArrowScale 1
+par Vntnet.visualizer.mobilityVisualizer velocityLineColor "\"black\""
+par Vntnet.visualizer.mobilityVisualizer velocityLineStyle "\"solid\""
+par Vntnet.visualizer.mobilityVisualizer velocityLineWidth 1
+par Vntnet.visualizer.mobilityVisualizer displayMovementTrails false
+par Vntnet.visualizer.mobilityVisualizer movementTrailLineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.mobilityVisualizer movementTrailLineStyle "\"solid\""
+par Vntnet.visualizer.mobilityVisualizer movementTrailLineWidth 1
+par Vntnet.visualizer.mobilityVisualizer trailLength 100
+par Vntnet.visualizer.mobilityVisualizer zIndex 0
+par Vntnet.visualizer.statisticVisualizer typename "\"inet.visualizer.canvas.common.StatisticCanvasVisualizer\""
+par Vntnet.visualizer.statisticVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.statisticVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.statisticVisualizer tags "\"\""
+par Vntnet.visualizer.statisticVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.statisticVisualizer displayStatistics true
+par Vntnet.visualizer.statisticVisualizer signalName "\"\""
+par Vntnet.visualizer.statisticVisualizer statisticName "\"\""
+par Vntnet.visualizer.statisticVisualizer statisticUnit "\"\""
+par Vntnet.visualizer.statisticVisualizer statisticExpression "\"\""
+par Vntnet.visualizer.statisticVisualizer sourceFilter "\"**\""
+attr mutable ""
+par Vntnet.visualizer.statisticVisualizer format "\"%n: %v %u\""
+attr mutable ""
+par Vntnet.visualizer.statisticVisualizer unit "\"\""
+par Vntnet.visualizer.statisticVisualizer font "\"<default>\""
+par Vntnet.visualizer.statisticVisualizer textColor "\"black\""
+par Vntnet.visualizer.statisticVisualizer backgroundColor "\"white\""
+par Vntnet.visualizer.statisticVisualizer opacity 1
+par Vntnet.visualizer.statisticVisualizer placementHint "\"top\""
+par Vntnet.visualizer.statisticVisualizer placementPriority 0
+par Vntnet.visualizer.statisticVisualizer zIndex 10
+par Vntnet.visualizer.statisticVisualizer propertyName "\"\""
+par Vntnet.visualizer.statisticVisualizer propertyIndex "\"\""
+par Vntnet.visualizer.infoVisualizer typename "\"inet.visualizer.canvas.common.InfoCanvasVisualizer\""
+par Vntnet.visualizer.infoVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.infoVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.infoVisualizer tags "\"\""
+par Vntnet.visualizer.infoVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.infoVisualizer displayInfos true
+par Vntnet.visualizer.infoVisualizer modules "\"\""
+attr mutable ""
+par Vntnet.visualizer.infoVisualizer format "\"%t\""
+attr mutable ""
+par Vntnet.visualizer.infoVisualizer font "\"<default>\""
+par Vntnet.visualizer.infoVisualizer textColor "\"black\""
+par Vntnet.visualizer.infoVisualizer backgroundColor "\"white\""
+par Vntnet.visualizer.infoVisualizer opacity 1
+par Vntnet.visualizer.infoVisualizer placementHint "\"top\""
+par Vntnet.visualizer.infoVisualizer placementPriority 0
+par Vntnet.visualizer.infoVisualizer zIndex 10
+par Vntnet.visualizer.energyStorageVisualizer typename "\"inet.visualizer.canvas.power.EnergyStorageCanvasVisualizer\""
+par Vntnet.visualizer.energyStorageVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.energyStorageVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.energyStorageVisualizer tags "\"\""
+par Vntnet.visualizer.energyStorageVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.energyStorageVisualizer displayEnergyStorages false
+par Vntnet.visualizer.energyStorageVisualizer energyStorageFilter "\"**\""
+par Vntnet.visualizer.energyStorageVisualizer color "\"green\""
+par Vntnet.visualizer.energyStorageVisualizer width 8
+par Vntnet.visualizer.energyStorageVisualizer height 24
+par Vntnet.visualizer.energyStorageVisualizer spacing 2
+par Vntnet.visualizer.energyStorageVisualizer placementHint "\"right\""
+par Vntnet.visualizer.energyStorageVisualizer placementPriority 0
+par Vntnet.visualizer.energyStorageVisualizer zIndex 10
+par Vntnet.visualizer.mediumVisualizer typename "\"inet.visualizer.canvas.physicallayer.MediumCanvasVisualizer\""
+par Vntnet.visualizer.mediumVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.mediumVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.mediumVisualizer tags "\"\""
+par Vntnet.visualizer.mediumVisualizer mediumModule "\"radioMedium\""
+par Vntnet.visualizer.mediumVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.mediumVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.mediumVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.mediumVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.mediumVisualizer displaySignals false
+par Vntnet.visualizer.mediumVisualizer signalColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.mediumVisualizer signalPropagationAnimationSpeed "nan "
+attr mutable ""
+par Vntnet.visualizer.mediumVisualizer signalPropagationAnimationTime 1s
+attr unit s
+par Vntnet.visualizer.mediumVisualizer signalPropagationAdditionalTime 0s
+attr unit s
+par Vntnet.visualizer.mediumVisualizer signalTransmissionAnimationSpeed "nan "
+attr mutable ""
+par Vntnet.visualizer.mediumVisualizer signalTransmissionAnimationTime 1s
+attr unit s
+par Vntnet.visualizer.mediumVisualizer signalAnimationSpeedChangeTimeMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.mediumVisualizer signalAnimationSpeedChangeTime 1s
+attr unit s
+par Vntnet.visualizer.mediumVisualizer displaySignalDepartures false
+par Vntnet.visualizer.mediumVisualizer signalDepartureImage "\"misc/signal_departure.png\""
+par Vntnet.visualizer.mediumVisualizer signalDeparturePlacementHint "\"topCenter\""
+par Vntnet.visualizer.mediumVisualizer signalDeparturePlacementPriority 1
+par Vntnet.visualizer.mediumVisualizer displaySignalArrivals false
+par Vntnet.visualizer.mediumVisualizer signalArrivalImage "\"misc/signal_arrival.png\""
+par Vntnet.visualizer.mediumVisualizer signalArrivalPlacementHint "\"topCenter\""
+par Vntnet.visualizer.mediumVisualizer signalArrivalPlacementPriority -1
+par Vntnet.visualizer.mediumVisualizer displayCommunicationRanges false
+par Vntnet.visualizer.mediumVisualizer communicationRangeLineColor "\"blue\""
+par Vntnet.visualizer.mediumVisualizer communicationRangeLineStyle "\"solid\""
+par Vntnet.visualizer.mediumVisualizer communicationRangeLineWidth 1
+par Vntnet.visualizer.mediumVisualizer displayInterferenceRanges false
+par Vntnet.visualizer.mediumVisualizer interferenceRangeLineColor "\"gray\""
+par Vntnet.visualizer.mediumVisualizer interferenceRangeLineStyle "\"solid\""
+par Vntnet.visualizer.mediumVisualizer interferenceRangeLineWidth 1
+par Vntnet.visualizer.mediumVisualizer autoPowerAxis true
+par Vntnet.visualizer.mediumVisualizer signalMinPower "inf dBmW"
+attr unit dBmW
+par Vntnet.visualizer.mediumVisualizer signalMaxPower 0dBmW
+attr unit dBmW
+par Vntnet.visualizer.mediumVisualizer signalMinPowerDensity "inf dBmWpMHz"
+attr unit dBmWpMHz
+par Vntnet.visualizer.mediumVisualizer signalMaxPowerDensity "-inf dBmWpMHz"
+attr unit dBmWpMHz
+par Vntnet.visualizer.mediumVisualizer autoTimeAxis true
+par Vntnet.visualizer.mediumVisualizer signalMinTime 0s
+attr unit s
+par Vntnet.visualizer.mediumVisualizer signalMaxTime 0s
+attr unit s
+par Vntnet.visualizer.mediumVisualizer autoFrequencyAxis true
+par Vntnet.visualizer.mediumVisualizer signalMinFrequency "inf Hz"
+attr unit Hz
+par Vntnet.visualizer.mediumVisualizer signalMaxFrequency "-inf Hz"
+attr unit Hz
+par Vntnet.visualizer.mediumVisualizer displayMainPowerDensityMap false
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapPixmapDensity 1
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapMinX 0
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapMaxX "nan "
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapMinY 0
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapMaxY "nan "
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapZ 0
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapFigureXTickCount 3
+par Vntnet.visualizer.mediumVisualizer mainPowerDensityMapFigureYTickCount 3
+par Vntnet.visualizer.mediumVisualizer displayPowerDensityMaps false
+par Vntnet.visualizer.mediumVisualizer powerDensityMapMode "\"auto\""
+attr enum total,signal,auto
+par Vntnet.visualizer.mediumVisualizer powerDensityMapPixelMode "\"mean\""
+attr enum sample,partition,mean
+par Vntnet.visualizer.mediumVisualizer powerDensityMapApproximationSize 10
+par Vntnet.visualizer.mediumVisualizer powerDensityMapCenterFrequency "nan Hz"
+attr mutable ""
+attr unit Hz
+par Vntnet.visualizer.mediumVisualizer powerDensityMapBandwidth 0Hz
+attr mutable ""
+attr unit Hz
+par Vntnet.visualizer.mediumVisualizer powerDensityMapFigureWidth 200
+par Vntnet.visualizer.mediumVisualizer powerDensityMapFigureHeight 120
+par Vntnet.visualizer.mediumVisualizer powerDensityMapPixmapWidth 200
+par Vntnet.visualizer.mediumVisualizer powerDensityMapPixmapHeight 120
+par Vntnet.visualizer.mediumVisualizer powerDensityMapZ 0
+par Vntnet.visualizer.mediumVisualizer powerDensityMapFigureXTickCount 3
+par Vntnet.visualizer.mediumVisualizer powerDensityMapFigureYTickCount 3
+par Vntnet.visualizer.mediumVisualizer displaySpectrums false
+par Vntnet.visualizer.mediumVisualizer spectrumMode "\"auto\""
+attr enum total,signal,auto
+par Vntnet.visualizer.mediumVisualizer spectrumFigureWidth 200
+par Vntnet.visualizer.mediumVisualizer spectrumFigureHeight 120
+par Vntnet.visualizer.mediumVisualizer spectrumFigureXTickCount 3
+par Vntnet.visualizer.mediumVisualizer spectrumFigureYTickCount 5
+par Vntnet.visualizer.mediumVisualizer spectrumFigureInterpolationSize 5
+par Vntnet.visualizer.mediumVisualizer spectrumPlacementHint "\"bottomCenter\""
+par Vntnet.visualizer.mediumVisualizer spectrumPlacementPriority -1
+par Vntnet.visualizer.mediumVisualizer displaySpectrograms false
+par Vntnet.visualizer.mediumVisualizer spectrogramMode "\"auto\""
+attr enum total,signal,auto
+par Vntnet.visualizer.mediumVisualizer spectrogramPixelMode "\"mean\""
+attr enum sample,partition,mean
+par Vntnet.visualizer.mediumVisualizer spectrogramFigureWidth 200
+par Vntnet.visualizer.mediumVisualizer spectrogramFigureHeight 120
+par Vntnet.visualizer.mediumVisualizer spectrogramPixmapWidth 200
+par Vntnet.visualizer.mediumVisualizer spectrogramPixmapHeight 120
+par Vntnet.visualizer.mediumVisualizer spectrogramFigureXTickCount 3
+par Vntnet.visualizer.mediumVisualizer spectrogramFigureYTickCount 5
+par Vntnet.visualizer.mediumVisualizer spectrogramPlacementHint "\"bottomCenter\""
+par Vntnet.visualizer.mediumVisualizer spectrogramPlacementPriority -1
+par Vntnet.visualizer.mediumVisualizer zIndex 0
+par Vntnet.visualizer.mediumVisualizer signalShape "\"ring\""
+attr enum ring,sphere
+par Vntnet.visualizer.mediumVisualizer signalOpacity 0.5
+par Vntnet.visualizer.mediumVisualizer signalRingCount 20
+par Vntnet.visualizer.mediumVisualizer signalRingSize 50m
+attr unit m
+par Vntnet.visualizer.mediumVisualizer signalFadingDistance 50m
+attr unit m
+par Vntnet.visualizer.mediumVisualizer signalFadingFactor 1.2
+par Vntnet.visualizer.mediumVisualizer signalWaveCount 20
+par Vntnet.visualizer.mediumVisualizer signalWaveLength 50m
+attr unit m
+par Vntnet.visualizer.mediumVisualizer signalWaveWidth 10m
+attr unit m
+par Vntnet.visualizer.mediumVisualizer signalWaveFadingAnimationSpeedFactor 1
+par Vntnet.visualizer.mediumVisualizer displayCommunicationHeat false
+par Vntnet.visualizer.obstacleLossVisualizer typename "\"inet.visualizer.canvas.physicallayer.TracingObstacleLossCanvasVisualizer\""
+par Vntnet.visualizer.obstacleLossVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.obstacleLossVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.obstacleLossVisualizer tags "\"\""
+par Vntnet.visualizer.obstacleLossVisualizer displayIntersections false
+par Vntnet.visualizer.obstacleLossVisualizer intersectionLineColor "\"red\""
+par Vntnet.visualizer.obstacleLossVisualizer intersectionLineStyle "\"solid\""
+par Vntnet.visualizer.obstacleLossVisualizer intersectionLineWidth 1
+par Vntnet.visualizer.obstacleLossVisualizer displayFaceNormalVectors false
+par Vntnet.visualizer.obstacleLossVisualizer faceNormalLineColor "\"grey\""
+par Vntnet.visualizer.obstacleLossVisualizer faceNormalLineStyle "\"solid\""
+par Vntnet.visualizer.obstacleLossVisualizer faceNormalLineWidth 1
+par Vntnet.visualizer.obstacleLossVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.obstacleLossVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.obstacleLossVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.obstacleLossVisualizer zIndex 0
+par Vntnet.visualizer.packetDropVisualizer typename "\"inet.visualizer.canvas.common.PacketDropCanvasVisualizer\""
+par Vntnet.visualizer.packetDropVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.packetDropVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.packetDropVisualizer tags "\"\""
+par Vntnet.visualizer.packetDropVisualizer displayPacketDrops false
+par Vntnet.visualizer.packetDropVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.packetDropVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.packetDropVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.packetDropVisualizer detailsFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.packetDropVisualizer icon "\"msg/packet_s\""
+par Vntnet.visualizer.packetDropVisualizer iconTintAmount 1
+par Vntnet.visualizer.packetDropVisualizer iconTintColor "\"dark\""
+par Vntnet.visualizer.packetDropVisualizer labelFormat "\"%n\""
+attr mutable ""
+par Vntnet.visualizer.packetDropVisualizer labelFont "\"<default>\""
+par Vntnet.visualizer.packetDropVisualizer labelColor "\"black\""
+par Vntnet.visualizer.packetDropVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.packetDropVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.packetDropVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.packetDropVisualizer zIndex 10
+par Vntnet.visualizer.packetDropVisualizer dx 32
+par Vntnet.visualizer.packetDropVisualizer dy 64
+par Vntnet.visualizer.packetFlowVisualizer typename "\"inet.visualizer.canvas.flow.PacketFlowCanvasVisualizer\""
+par Vntnet.visualizer.packetFlowVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.packetFlowVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.packetFlowVisualizer tags "\"\""
+par Vntnet.visualizer.packetFlowVisualizer displayRoutes false
+par Vntnet.visualizer.packetFlowVisualizer startPathSignal "\"packetFlowStarted\""
+par Vntnet.visualizer.packetFlowVisualizer extendPathSignal "\"packetReceivedFromLower\""
+par Vntnet.visualizer.packetFlowVisualizer endPathSignal "\"packetFlowEnded\""
+par Vntnet.visualizer.packetFlowVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.packetFlowVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.packetFlowVisualizer lineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.packetFlowVisualizer lineStyle "\"dashed\""
+par Vntnet.visualizer.packetFlowVisualizer lineWidth 3
+par Vntnet.visualizer.packetFlowVisualizer lineSmooth false
+par Vntnet.visualizer.packetFlowVisualizer lineShift 16
+par Vntnet.visualizer.packetFlowVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.packetFlowVisualizer lineContactSpacing 3
+par Vntnet.visualizer.packetFlowVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.packetFlowVisualizer labelFormat "\"%L %p pk (%l)\""
+par Vntnet.visualizer.packetFlowVisualizer labelFont "\"<default>, 8px\""
+par Vntnet.visualizer.packetFlowVisualizer labelColor "\"\""
+par Vntnet.visualizer.packetFlowVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.packetFlowVisualizer fadeOutTime 0s
+attr unit s
+par Vntnet.visualizer.packetFlowVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.packetFlowVisualizer zIndex 4
+par Vntnet.visualizer.queueVisualizer typename "\"inet.visualizer.canvas.common.QueueCanvasVisualizer\""
+par Vntnet.visualizer.queueVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.queueVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.queueVisualizer tags "\"\""
+par Vntnet.visualizer.queueVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.queueVisualizer displayQueues false
+par Vntnet.visualizer.queueVisualizer queueFilter "\"**\""
+par Vntnet.visualizer.queueVisualizer color "\"blue\""
+par Vntnet.visualizer.queueVisualizer width 8
+par Vntnet.visualizer.queueVisualizer height 24
+par Vntnet.visualizer.queueVisualizer spacing 2
+par Vntnet.visualizer.queueVisualizer placementHint "\"right\""
+par Vntnet.visualizer.queueVisualizer placementPriority 0
+par Vntnet.visualizer.queueVisualizer zIndex 10
+par Vntnet.visualizer.gateScheduleVisualizer typename "\"inet.visualizer.canvas.common.GateScheduleCanvasVisualizer\""
+par Vntnet.visualizer.gateScheduleVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.gateScheduleVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.gateScheduleVisualizer tags "\"\""
+par Vntnet.visualizer.gateScheduleVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.gateScheduleVisualizer displayGateSchedules false
+par Vntnet.visualizer.gateScheduleVisualizer labelFormat "\"%i %D\""
+par Vntnet.visualizer.gateScheduleVisualizer gateFilter "\"**\""
+par Vntnet.visualizer.gateScheduleVisualizer width 100
+par Vntnet.visualizer.gateScheduleVisualizer height 8
+par Vntnet.visualizer.gateScheduleVisualizer spacing 2
+par Vntnet.visualizer.gateScheduleVisualizer placementHint "\"right\""
+par Vntnet.visualizer.gateScheduleVisualizer placementPriority 0
+par Vntnet.visualizer.gateScheduleVisualizer displayDuration 0s
+attr mutable ""
+attr unit s
+par Vntnet.visualizer.gateScheduleVisualizer currentTimePosition 50
+par Vntnet.visualizer.gateScheduleVisualizer zIndex 10
+par Vntnet.visualizer.radioVisualizer typename "\"inet.visualizer.canvas.physicallayer.RadioCanvasVisualizer\""
+par Vntnet.visualizer.radioVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.radioVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.radioVisualizer tags "\"\""
+par Vntnet.visualizer.radioVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.radioVisualizer displayRadios false
+par Vntnet.visualizer.radioVisualizer displayRadioMode true
+par Vntnet.visualizer.radioVisualizer displayReceptionState true
+par Vntnet.visualizer.radioVisualizer displayTransmissionState true
+par Vntnet.visualizer.radioVisualizer displayAntennaLobes false
+par Vntnet.visualizer.radioVisualizer radioFilter "\"**\""
+attr mutable ""
+par Vntnet.visualizer.radioVisualizer radioModeImages "\"block/process_vs block/timer_vs block/wrx_vs block/wtx_vs block/wrxtx_vs block/cogwheel_vs\""
+par Vntnet.visualizer.radioVisualizer receptionStateImages "\"- - misc/receiving misc/receiving\""
+par Vntnet.visualizer.radioVisualizer transmissionStateImages "\"- - misc/transmitting\""
+par Vntnet.visualizer.radioVisualizer width 16
+par Vntnet.visualizer.radioVisualizer height 16
+par Vntnet.visualizer.radioVisualizer placementHint "\"bottomRight\""
+par Vntnet.visualizer.radioVisualizer placementPriority 0
+par Vntnet.visualizer.radioVisualizer antennaLobeNormalize false
+par Vntnet.visualizer.radioVisualizer antennaLobeRelativeLabels false
+par Vntnet.visualizer.radioVisualizer antennaLobePlaneGlobal true
+par Vntnet.visualizer.radioVisualizer antennaLobePlane "\"view\""
+attr enum view,xy,xz,yz
+par Vntnet.visualizer.radioVisualizer antennaLobeMode "\"logarithmic\""
+attr enum logarithmic,linear
+par Vntnet.visualizer.radioVisualizer antennaLobeLogarithmicBase 10
+par Vntnet.visualizer.radioVisualizer antennaLobeLogarithmicScale 100
+par Vntnet.visualizer.radioVisualizer antennaLobeRadius 100
+par Vntnet.visualizer.radioVisualizer antennaLobeStep 10deg
+attr unit deg
+par Vntnet.visualizer.radioVisualizer antennaLobeOpacity 0.25
+par Vntnet.visualizer.radioVisualizer antennaLobeLineSmooth true
+par Vntnet.visualizer.radioVisualizer antennaLobeLineColor "\"black\""
+par Vntnet.visualizer.radioVisualizer antennaLobeLineStyle "\"solid\""
+par Vntnet.visualizer.radioVisualizer antennaLobeLineWidth 1
+par Vntnet.visualizer.radioVisualizer antennaLobeFillColor "\"white\""
+par Vntnet.visualizer.radioVisualizer zIndex 10
+par Vntnet.visualizer.physicalLinkVisualizer typename "\"inet.visualizer.canvas.physicallayer.PhysicalLinkCanvasVisualizer\""
+par Vntnet.visualizer.physicalLinkVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.physicalLinkVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.physicalLinkVisualizer tags "\"\""
+par Vntnet.visualizer.physicalLinkVisualizer displayLinks false
+par Vntnet.visualizer.physicalLinkVisualizer activityLevel "\"service\""
+attr enum service,peer,protocol
+par Vntnet.visualizer.physicalLinkVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.physicalLinkVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.physicalLinkVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.physicalLinkVisualizer lineColor "\"olive\""
+par Vntnet.visualizer.physicalLinkVisualizer lineStyle "\"dotted\""
+par Vntnet.visualizer.physicalLinkVisualizer lineWidth 3
+par Vntnet.visualizer.physicalLinkVisualizer lineShift 16
+par Vntnet.visualizer.physicalLinkVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.physicalLinkVisualizer lineContactSpacing 3
+par Vntnet.visualizer.physicalLinkVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.physicalLinkVisualizer labelFormat "\"%n\""
+par Vntnet.visualizer.physicalLinkVisualizer labelFont "\"<default>, 8px\""
+par Vntnet.visualizer.physicalLinkVisualizer labelColor "\"olive\""
+par Vntnet.visualizer.physicalLinkVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.physicalLinkVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.physicalLinkVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.physicalLinkVisualizer holdAnimationTime 0s
+attr unit s
+par Vntnet.visualizer.physicalLinkVisualizer zIndex 1
+par Vntnet.visualizer.interfaceTableVisualizer typename "\"inet.visualizer.canvas.linklayer.InterfaceTableCanvasVisualizer\""
+par Vntnet.visualizer.interfaceTableVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.interfaceTableVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.interfaceTableVisualizer tags "\"\""
+par Vntnet.visualizer.interfaceTableVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.interfaceTableVisualizer displayInterfaceTables false
+par Vntnet.visualizer.interfaceTableVisualizer displayWiredInterfacesAtConnections true
+par Vntnet.visualizer.interfaceTableVisualizer displayBackground false
+par Vntnet.visualizer.interfaceTableVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.interfaceTableVisualizer interfaceFilter "\"not(lo*)\""
+attr mutable ""
+par Vntnet.visualizer.interfaceTableVisualizer format "\"%N %\\\\%a%/%l\""
+attr mutable ""
+par Vntnet.visualizer.interfaceTableVisualizer placementHint "\"top\""
+par Vntnet.visualizer.interfaceTableVisualizer placementPriority 0
+par Vntnet.visualizer.interfaceTableVisualizer font "\"<default>\""
+par Vntnet.visualizer.interfaceTableVisualizer textColor "\"#005030\""
+par Vntnet.visualizer.interfaceTableVisualizer backgroundColor "\"white\""
+par Vntnet.visualizer.interfaceTableVisualizer opacity 1
+par Vntnet.visualizer.interfaceTableVisualizer zIndex 10
+par Vntnet.visualizer.dataLinkVisualizer typename "\"inet.visualizer.canvas.linklayer.DataLinkCanvasVisualizer\""
+par Vntnet.visualizer.dataLinkVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.dataLinkVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.dataLinkVisualizer tags "\"\""
+par Vntnet.visualizer.dataLinkVisualizer displayLinks false
+par Vntnet.visualizer.dataLinkVisualizer activityLevel "\"service\""
+attr enum service,peer,protocol
+par Vntnet.visualizer.dataLinkVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.dataLinkVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.dataLinkVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.dataLinkVisualizer lineColor "\"darkcyan\""
+par Vntnet.visualizer.dataLinkVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.dataLinkVisualizer lineWidth 3
+par Vntnet.visualizer.dataLinkVisualizer lineShift 16
+par Vntnet.visualizer.dataLinkVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.dataLinkVisualizer lineContactSpacing 3
+par Vntnet.visualizer.dataLinkVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.dataLinkVisualizer labelFormat "\"%n\""
+par Vntnet.visualizer.dataLinkVisualizer labelFont "\"<default>, 8px\""
+par Vntnet.visualizer.dataLinkVisualizer labelColor "\"darkcyan\""
+par Vntnet.visualizer.dataLinkVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.dataLinkVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.dataLinkVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.dataLinkVisualizer holdAnimationTime 0s
+attr unit s
+par Vntnet.visualizer.dataLinkVisualizer zIndex 2
+par Vntnet.visualizer.linkBreakVisualizer typename "\"inet.visualizer.canvas.linklayer.LinkBreakCanvasVisualizer\""
+par Vntnet.visualizer.linkBreakVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.linkBreakVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.linkBreakVisualizer tags "\"\""
+par Vntnet.visualizer.linkBreakVisualizer displayLinkBreaks false
+par Vntnet.visualizer.linkBreakVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.linkBreakVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.linkBreakVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.linkBreakVisualizer icon "\"status/stop\""
+par Vntnet.visualizer.linkBreakVisualizer iconTintAmount 0
+par Vntnet.visualizer.linkBreakVisualizer iconTintColor "\"\""
+par Vntnet.visualizer.linkBreakVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.linkBreakVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.linkBreakVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.linkBreakVisualizer zIndex 2
+par Vntnet.visualizer.ieee80211Visualizer typename "\"inet.visualizer.canvas.linklayer.Ieee80211CanvasVisualizer\""
+par Vntnet.visualizer.ieee80211Visualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.ieee80211Visualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.ieee80211Visualizer tags "\"\""
+par Vntnet.visualizer.ieee80211Visualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.ieee80211Visualizer displayAssociations false
+par Vntnet.visualizer.ieee80211Visualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.ieee80211Visualizer interfaceFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.ieee80211Visualizer minPower -85dBm
+attr unit dBm
+par Vntnet.visualizer.ieee80211Visualizer maxPower -50dBm
+attr unit dBm
+par Vntnet.visualizer.ieee80211Visualizer icons "\"misc/signal_power_0 misc/signal_power_1 misc/signal_power_2 misc/signal_power_3\""
+par Vntnet.visualizer.ieee80211Visualizer iconColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.ieee80211Visualizer labelFont "\"<default>\""
+par Vntnet.visualizer.ieee80211Visualizer labelColor "\"black\""
+par Vntnet.visualizer.ieee80211Visualizer placementHint "\"top\""
+par Vntnet.visualizer.ieee80211Visualizer placementPriority 0
+par Vntnet.visualizer.ieee80211Visualizer zIndex 2
+par Vntnet.visualizer.networkRouteVisualizer typename "\"inet.visualizer.canvas.networklayer.NetworkRouteCanvasVisualizer\""
+par Vntnet.visualizer.networkRouteVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.networkRouteVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.networkRouteVisualizer tags "\"\""
+par Vntnet.visualizer.networkRouteVisualizer displayRoutes false
+par Vntnet.visualizer.networkRouteVisualizer startPathSignal "\"packetReceivedFromUpper\""
+par Vntnet.visualizer.networkRouteVisualizer extendPathSignal "\"packetReceivedFromLower\""
+par Vntnet.visualizer.networkRouteVisualizer endPathSignal "\"packetSentToUpper\""
+par Vntnet.visualizer.networkRouteVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.networkRouteVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.networkRouteVisualizer lineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.networkRouteVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.networkRouteVisualizer lineWidth 3
+par Vntnet.visualizer.networkRouteVisualizer lineSmooth false
+par Vntnet.visualizer.networkRouteVisualizer lineShift 16
+par Vntnet.visualizer.networkRouteVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.networkRouteVisualizer lineContactSpacing 3
+par Vntnet.visualizer.networkRouteVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.networkRouteVisualizer labelFormat "\"%n\""
+par Vntnet.visualizer.networkRouteVisualizer labelFont "\"<default>, 8px\""
+par Vntnet.visualizer.networkRouteVisualizer labelColor "\"\""
+par Vntnet.visualizer.networkRouteVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.networkRouteVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.networkRouteVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.networkRouteVisualizer zIndex 3
+par Vntnet.visualizer.routingTableVisualizer typename "\"inet.visualizer.canvas.networklayer.RoutingTableCanvasVisualizer\""
+par Vntnet.visualizer.routingTableVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.routingTableVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.routingTableVisualizer tags "\"\""
+par Vntnet.visualizer.routingTableVisualizer displayRoutingTables false
+par Vntnet.visualizer.routingTableVisualizer displayRoutesIndividually true
+par Vntnet.visualizer.routingTableVisualizer displayLabels true
+par Vntnet.visualizer.routingTableVisualizer destinationFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.routingTableVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.routingTableVisualizer lineColor "\"black\""
+par Vntnet.visualizer.routingTableVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.routingTableVisualizer lineWidth 2
+par Vntnet.visualizer.routingTableVisualizer lineShift 16
+par Vntnet.visualizer.routingTableVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.routingTableVisualizer lineContactSpacing 3
+par Vntnet.visualizer.routingTableVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.routingTableVisualizer labelFormat "\"%d/%m -> %g (%n)\""
+attr mutable ""
+par Vntnet.visualizer.routingTableVisualizer labelFont "\"<default>, 8px\""
+par Vntnet.visualizer.routingTableVisualizer labelColor "\"black\""
+par Vntnet.visualizer.routingTableVisualizer zIndex 0
+par Vntnet.visualizer.transportRouteVisualizer typename "\"inet.visualizer.canvas.transportlayer.TransportRouteCanvasVisualizer\""
+par Vntnet.visualizer.transportRouteVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.transportRouteVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.transportRouteVisualizer tags "\"\""
+par Vntnet.visualizer.transportRouteVisualizer displayRoutes false
+par Vntnet.visualizer.transportRouteVisualizer startPathSignal "\"packetReceivedFromUpper\""
+par Vntnet.visualizer.transportRouteVisualizer extendPathSignal "\"packetReceivedFromLower\""
+par Vntnet.visualizer.transportRouteVisualizer endPathSignal "\"packetSentToUpper\""
+par Vntnet.visualizer.transportRouteVisualizer nodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.transportRouteVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par Vntnet.visualizer.transportRouteVisualizer lineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.transportRouteVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.transportRouteVisualizer lineWidth 3
+par Vntnet.visualizer.transportRouteVisualizer lineSmooth false
+par Vntnet.visualizer.transportRouteVisualizer lineShift 16
+par Vntnet.visualizer.transportRouteVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.transportRouteVisualizer lineContactSpacing 3
+par Vntnet.visualizer.transportRouteVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.transportRouteVisualizer labelFormat "\"%n\""
+par Vntnet.visualizer.transportRouteVisualizer labelFont "\"<default>, 8px\""
+par Vntnet.visualizer.transportRouteVisualizer labelColor "\"\""
+par Vntnet.visualizer.transportRouteVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par Vntnet.visualizer.transportRouteVisualizer fadeOutTime 1s
+attr unit s
+par Vntnet.visualizer.transportRouteVisualizer fadeOutAnimationSpeed 0
+par Vntnet.visualizer.transportRouteVisualizer zIndex 4
+par Vntnet.visualizer.transportConnectionVisualizer typename "\"inet.visualizer.canvas.transportlayer.TransportConnectionCanvasVisualizer\""
+par Vntnet.visualizer.transportConnectionVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.transportConnectionVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.transportConnectionVisualizer tags "\"\""
+par Vntnet.visualizer.transportConnectionVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par Vntnet.visualizer.transportConnectionVisualizer displayTransportConnections false
+par Vntnet.visualizer.transportConnectionVisualizer sourceNodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.transportConnectionVisualizer sourcePortFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.transportConnectionVisualizer destinationNodeFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.transportConnectionVisualizer destinationPortFilter "\"*\""
+attr mutable ""
+par Vntnet.visualizer.transportConnectionVisualizer icon "\"misc/marker_s\""
+par Vntnet.visualizer.transportConnectionVisualizer iconColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.transportConnectionVisualizer labelFont "\"<default>\""
+par Vntnet.visualizer.transportConnectionVisualizer labelColor "\"black\""
+par Vntnet.visualizer.transportConnectionVisualizer placementHint "\"top\""
+par Vntnet.visualizer.transportConnectionVisualizer placementPriority 0
+par Vntnet.visualizer.transportConnectionVisualizer zIndex 4
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer typename "\"inet.visualizer.canvas.configurator.FailureProtectionConfigurationCanvasVisualizer\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer tags "\"\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer displayTrees false
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineWidth 3
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineSmooth false
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineShift 16
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineContactSpacing 3
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer failureProtectionConfiguratorModule "\"failureProtectionConfigurator\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer streamFilter "\"*\""
+par Vntnet.visualizer.failureProtectionConfigurationVisualizer zIndex 3
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer typename "\"inet.visualizer.canvas.configurator.StreamRedundancyConfigurationCanvasVisualizer\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer visualizationTargetModule "\"^.^\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer visualizationSubjectModule "\"^.^\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer tags "\"\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer displayTrees false
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineColor "\"dark\""
+attr enum light,dark
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineStyle "\"solid\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineWidth 3
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineSmooth false
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineShift 16
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineShiftMode "\"normal\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineContactSpacing 3
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer streamRedundancyConfiguratorModule "\"streamRedundancyConfigurator\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer streamFilter "\"*\""
+par Vntnet.visualizer.streamRedundancyConfigurationVisualizer zIndex 3
+par Vntnet.visualizer typename "\"inet.visualizer.canvas.integrated.IntegratedCanvasVisualizer\""
+par Vntnet.coordinateSystem typename "\"inet.common.geometry.common.SimpleGeographicCoordinateSystem\""
+par Vntnet.coordinateSystem sceneLatitude 47.5377deg
+attr unit deg
+par Vntnet.coordinateSystem sceneLongitude 19.0334deg
+attr unit deg
+par Vntnet.coordinateSystem sceneAltitude 0m
+attr unit m
+par Vntnet typename "\"Vntnet\""
+par Vntnet num_node 10
+par Vntnet hasVisualizer false
+
